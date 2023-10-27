@@ -4,7 +4,7 @@ import MainContentContainer from '@/components/PageContainer';
 const Home = () => {
   return (
     <>
-      <MainContentContainer>12312</MainContentContainer>
+      <MainContentContainer>home</MainContentContainer>
       <Aside />
     </>
   );

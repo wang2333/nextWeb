@@ -83,7 +83,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className='bg-gray-100 text-black antialiased dark:bg-neutral-950 dark:text-white'>
         <ThemeProviders>
           <Header />
-          <main className={`${styles.main} flex justify-center mx-auto px-5 xl:max-w-7xl`}>
+          <main className={`${styles.main}  flex justify-center mx-auto px-5 xl:max-w-7xl`}>
             {children}
           </main>
         </ThemeProviders>
