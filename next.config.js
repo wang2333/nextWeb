@@ -3,6 +3,8 @@ const path = require('path');
 module.exports = {
   reactStrictMode: true,
   distDir: 'dist',
+  // output: 'export',
+  basePath: '',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
