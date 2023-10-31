@@ -1,56 +1,34 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { Container, Nav, Navbar } from "react-bootstrap"
 
-import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 
-interface MainNavProps {
-  items?: NavItem[]
-}
-
-const MainNav = ({ items }: MainNavProps) => {
-  const pathname = usePathname()
-
+function SiteHeader() {
   return (
-    <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
-      </Link>
-      {items?.length ? (
-        <nav className="flex gap-6">
-          {items?.map(
-            (item, index) =>
-              item.href && (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "text-muted-foreground flex items-center text-sm font-medium",
-                    pathname === item.href && "text-primary"
-                  )}
-                >
+    <header>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="/" className="flex">
+            <Icons.logo className="mr-1 h-6 w-6" />
+            <span>{siteConfig.name}</span>
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav>
+              {siteConfig.mainNav.map((item, index) => (
+                <Nav.Link key={index} href={item.href}>
                   {item.title}
-                </Link>
-              )
-          )}
-        </nav>
-      ) : null}
-    </div>
-  )
-}
-
-export function SiteHeader() {
-  return (
-    <header className="bg-background sticky top-0 z-40 w-full border-b">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
-      </div>
+                </Nav.Link>
+              ))}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   )
 }
+export default SiteHeader

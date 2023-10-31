@@ -1,13 +1,22 @@
-import style from "./page.module.scss"
+import { Button, Col, Container, Row, Stack } from "react-bootstrap"
 
-const About = () => {
+function AutoLayoutVariableExample() {
   return (
-    <div className="container">
-      <span className={style.div}>
-        <span>12321</span>
-      </span>
-    </div>
+    <Container>
+      <Stack direction="horizontal" gap={2}>
+        <Button as="a" variant="primary">
+          Button as link
+        </Button>
+        <Button as="a" variant="success">
+          Button as link
+        </Button>
+      </Stack>
+      <Row>
+        <Col lg="2">1 of 3</Col>
+        <Col lg="2">3 of 3</Col>
+      </Row>
+    </Container>
   )
 }
 
-export default About
+export default AutoLayoutVariableExample

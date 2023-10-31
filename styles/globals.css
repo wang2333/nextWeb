@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --primary: red;
+    --primary: #0d6efd;
     --radius: 0.5rem;
   }
 }
