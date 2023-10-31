@@ -1,5 +1,7 @@
 import { Button, Col, Container, Row, Stack } from "react-bootstrap"
 
+import FadeIn from "@/components/spring/FadeIn"
+
 function AutoLayoutVariableExample() {
   return (
     <Container>
@@ -11,10 +13,12 @@ function AutoLayoutVariableExample() {
           Button as link
         </Button>
       </Stack>
-      <Row>
-        <Col lg="2">1 of 3</Col>
-        <Col lg="2">3 of 3</Col>
-      </Row>
+      <FadeIn>
+        <Row id="aaa">
+          <Col lg="2">1 of 3</Col>
+          <Col lg="2">3 of 3</Col>
+        </Row>
+      </FadeIn>
     </Container>
   )
 }

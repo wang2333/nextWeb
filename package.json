@@ -14,6 +14,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "bootstrap": "^5.3.2",
     "clsx": "^1.2.1",
     "lucide-react": "0.105.0-alpha.4",
@@ -21,6 +22,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.5.2",
     "tailwind-merge": "^1.13.2",
     "tailwindcss-animate": "^1.0.6"
   },
