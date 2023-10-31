@@ -1,13 +1,13 @@
-import Aside from '@/components/Aside';
-import MainContentContainer from '@/components/PageContainer';
+import style from "./page.module.scss"
 
 const About = () => {
   return (
-    <>
-      <MainContentContainer>关于页开发中...</MainContentContainer>
-      <Aside />
-    </>
-  );
-};
+    <div className="container">
+      <span className={style.div}>
+        <span href="">12321</span>
+      </span>
+    </div>
+  )
+}
 
-export default About;
+export default About

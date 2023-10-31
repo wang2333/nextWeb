@@ -1,13 +1,3 @@
-import Aside from '@/components/Aside';
-import MainContentContainer from '@/components/PageContainer';
-
-const Home = () => {
-  return (
-    <>
-      <MainContentContainer>home</MainContentContainer>
-      <Aside />
-    </>
-  );
-};
-
-export default Home;
+export default function IndexPage() {
+  return <section className="container">首页</section>
+}
