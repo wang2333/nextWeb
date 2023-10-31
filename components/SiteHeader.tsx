@@ -31,8 +31,8 @@ const MainNav = ({ items }: MainNavProps) => {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
-                    pathname === item.href && "border-b-2 border-red-100"
+                    "text-muted-foreground flex items-center text-sm font-medium",
+                    pathname === item.href && "text-primary"
                   )}
                 >
                   {item.title}
@@ -47,7 +47,7 @@ const MainNav = ({ items }: MainNavProps) => {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="bg-background sticky top-0 z-40 w-full border-b">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <MainNav items={siteConfig.mainNav} />
       </div>

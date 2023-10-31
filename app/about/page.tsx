@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="container">
       <span className={style.div}>
-        <span href="">12321</span>
+        <span>12321</span>
       </span>
     </div>
   )
