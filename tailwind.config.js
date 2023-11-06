@@ -4,15 +4,24 @@ module.exports = {
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     container: {
+      padding: "0",
       center: true,
-      padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1568px",
       },
     },
     extend: {
+      fontSize: {
+        base: ["1rem", "1rem"],
+        lg: ["1.25rem", "1.25rem"],
+      },
+      height: {
+        130: "32.5rem",
+      },
       colors: {
         primary: "var(--primary)",
+        nornam: "var(--normal)",
+        gray: "var(--gray)",
       },
       borderRadius: {
         lg: `var(--radius)`,

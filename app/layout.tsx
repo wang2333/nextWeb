@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css"
+import "@/styles/bootstrap.scss"
 import "@/styles/globals.css"
 import { Metadata } from "next"
 
@@ -25,16 +25,14 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <body className='antialiased" bg-background min-h-screen font-sans'>
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <div className="flex-1">{children}</div>
-          </div>
-          <TailwindIndicator />
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <body className='antialiased" bg-background min-h-screen font-sans'>
+        <div className="relative flex min-h-screen flex-col">
+          <SiteHeader />
+          <div className="flex-1">{children}</div>
+        </div>
+        <TailwindIndicator />
+      </body>
+    </html>
   )
 }

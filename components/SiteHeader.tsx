@@ -1,27 +1,38 @@
 "use client"
 
 import * as React from "react"
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { usePathname } from "next/navigation"
+import { cn } from "lib/utils"
+import { Container, Image, Nav, Navbar } from "react-bootstrap"
 
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 
 function SiteHeader() {
+  const pathName = usePathname()
   return (
-    <header>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="/" className="flex">
-            <Icons.logo className="mr-1 h-6 w-6" />
-            <span>{siteConfig.name}</span>
+    <header id="header">
+      <Navbar expand="lg" className="py-3">
+        <Container style={{ flexWrap: "wrap" }} className="2xl container">
+          <Navbar.Brand href="/" className="block p-0">
+            <Image src="/images/logo.jpg" alt="logo" className="w-45 h-10" />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2" />
+
+          <Navbar.Collapse id="basic-navbar-nav" className="mt-2 w-full">
             <Nav>
-              {siteConfig.mainNav.map((item, index) => (
-                <Nav.Link key={index} href={item.href}>
+              {siteConfig.mainNav.map((item) => (
+                <Nav.Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn([
+                    "mr-20 flex items-center text-lg hover:text-primary",
+                    pathName === item.href && "text-primary",
+                  ])}
+                >
                   {item.title}
+                  {item.children && <Icons.down className="ml-1" />}
                 </Nav.Link>
               ))}
             </Nav>

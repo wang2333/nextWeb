@@ -1,0 +1,13 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+.container {
+  padding: 0;
+}
+#header {
+  a {
+    color: #1a2c3c;
+    font-weight: 550;
+    &:hover {
+      color: #1677ff;
+    }
+  }
+}
