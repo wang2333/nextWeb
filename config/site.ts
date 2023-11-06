@@ -12,12 +12,30 @@ export const siteConfig = {
     {
       title: "产品开发",
       href: "/product",
-      children: ["1"],
+      children: [
+        {
+          title: "产品设计",
+          href: "/product/design",
+        },
+        {
+          title: "产品开发",
+          href: "/product/develop",
+        },
+      ],
     },
     {
       title: "解决方案",
       href: "/plan",
-      children: ["1"],
+      children: [
+        {
+          title: "智能制造",
+          href: "/plan",
+        },
+        {
+          title: "智能医疗",
+          href: "/plan",
+        },
+      ],
     },
     {
       title: "智云动态",

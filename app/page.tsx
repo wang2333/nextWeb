@@ -17,6 +17,7 @@ const listData = [
     img: "/images/icon3.jpg",
   },
 ]
+
 export default function IndexPage() {
   return (
     <>
