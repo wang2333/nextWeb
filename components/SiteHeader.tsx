@@ -3,13 +3,43 @@
 import * as React from "react"
 import { usePathname } from "next/navigation"
 import { cn } from "lib/utils"
-import { Container, Image, Nav, NavDropdown, Navbar } from "react-bootstrap"
+import {
+  Collapse,
+  Container,
+  Fade,
+  Image,
+  Nav,
+  NavDropdown,
+  Navbar,
+} from "react-bootstrap"
 
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 
+interface SiteHeaderProps {
+  [key: string]: boolean
+}
+
 function SiteHeader() {
   const pathName = usePathname()
+  const [show, setShow] = React.useState<SiteHeaderProps>({
+    "/product": false,
+    "/plan": false,
+  })
+
+  const handleShow = (key: string) => {
+    setShow((prev) => ({
+      "/product": false,
+      "/plan": false,
+      [key]: true,
+    }))
+  }
+  const handleHide = () => {
+    setShow({
+      "/product": false,
+      "/plan": false,
+    })
+  }
   return (
     <header id="header">
       <Navbar expand="lg" className="py-3">
@@ -26,6 +56,8 @@ function SiteHeader() {
                 if (item.children) {
                   return (
                     <NavDropdown
+                      show={show[item.href]}
+                      onMouseEnter={() => handleShow(item.href)}
                       title={item.title}
                       key={item.title}
                       id="basic-nav-dropdown"
@@ -34,25 +66,31 @@ function SiteHeader() {
                         pathName === item.href && "text-primary",
                       ])}
                     >
-                      {item.children.map((child) => {
-                        return (
-                          <NavDropdown.Item
-                            href={child.href}
-                            key={child.href}
-                            className={cn([
-                              "py-3 text-lg hover:text-primary",
-                              pathName === item.href && "text-primary",
-                            ])}
-                          >
-                            {child.title}
-                          </NavDropdown.Item>
-                        )
-                      })}
+                      <Collapse in={show[item.href]}>
+                        <div onMouseLeave={handleHide}>
+                          {item.children.map((child) => {
+                            return (
+                              <NavDropdown.Item
+                                href={child.href}
+                                key={child.href}
+                                className={cn([
+                                  "py-3 text-lg hover:text-primary",
+                                  pathName === item.href && "text-primary",
+                                ])}
+                              >
+                                {child.title}
+                              </NavDropdown.Item>
+                            )
+                          })}
+                        </div>
+                      </Collapse>
                     </NavDropdown>
                   )
                 } else {
                   return (
                     <Nav.Link
+                      onMouseEnter={handleHide}
+                      onMouseLeave={handleHide}
                       key={item.href}
                       href={item.href}
                       className={cn([
