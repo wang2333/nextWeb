@@ -1,0 +1,21 @@
+.header {
+  :global {
+    .dropdown-menu {
+      border: none;
+      padding: 0;
+    }
+    a {
+      color: #1a2c3c;
+      font-weight: 500;
+      &:hover {
+        color: #1677ff;
+      }
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+}
+.Footer {
+  background-color: #0b1d2e;
+}

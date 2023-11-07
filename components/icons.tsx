@@ -2,6 +2,7 @@
 import {
   ChevronDown,
   Moon,
+  Phone,
   SunMedium,
   type Icon as LucideIcon,
 } from "lucide-react"
@@ -12,4 +13,5 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   down: ChevronDown,
+  Phone: Phone,
 }

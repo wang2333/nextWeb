@@ -3,7 +3,8 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import SiteHeader from "@/components/SiteHeader"
+import Footer from "@/components/layout/Footer"
+import Header from "@/components/layout/Header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
@@ -28,8 +29,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body className='antialiased" bg-background min-h-screen font-sans'>
         <div className="relative flex min-h-screen flex-col">
-          <SiteHeader />
+          <Header />
           <div className="flex-1">{children}</div>
+          <Footer />
         </div>
         <TailwindIndicator />
       </body>
