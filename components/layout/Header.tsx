@@ -6,7 +6,6 @@ import { cn } from "lib/utils"
 import {
   Collapse,
   Container,
-  Fade,
   Image,
   Nav,
   NavDropdown,
@@ -16,34 +15,33 @@ import {
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 
+import Style from "./layout.module.scss"
+
 interface SiteHeaderProps {
   [key: string]: boolean
+}
+const initDate: SiteHeaderProps = {
+  "/product": false,
+  "/plan": false,
 }
 
 function SiteHeader() {
   const pathName = usePathname()
-  const [show, setShow] = React.useState<SiteHeaderProps>({
-    "/product": false,
-    "/plan": false,
-  })
+  const [show, setShow] = React.useState<SiteHeaderProps>(initDate)
 
   const handleShow = (key: string) => {
-    setShow((prev) => ({
-      "/product": false,
-      "/plan": false,
-      [key]: true,
-    }))
-  }
-  const handleHide = () => {
     setShow({
-      "/product": false,
-      "/plan": false,
+      ...initDate,
+      [key]: true,
     })
   }
+  const handleHide = () => {
+    setShow(initDate)
+  }
   return (
-    <header id="header">
+    <header id="header" className={Style.header}>
       <Navbar expand="lg" className="py-3">
-        <Container style={{ flexWrap: "wrap" }} className="2xl container">
+        <Container className="2xl container">
           <Navbar.Brand href="/" className="block p-0">
             <Image src="/images/logo.jpg" alt="logo" className="w-45 h-10" />
           </Navbar.Brand>
@@ -56,25 +54,30 @@ function SiteHeader() {
                 if (item.children) {
                   return (
                     <NavDropdown
-                      show={show[item.href]}
-                      onMouseEnter={() => handleShow(item.href)}
                       title={item.title}
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "mr-20 text-lg hover:text-primary",
+                        "mx-10 text-lg hover:text-primary",
                         pathName === item.href && "text-primary",
                       ])}
+                      show={show[item.href]}
+                      onMouseEnter={() => handleShow(item.href)}
+                      aria-controls="example-collapse-text"
+                      aria-expanded={show[item.href]}
                     >
-                      <Collapse in={show[item.href]}>
-                        <div onMouseLeave={handleHide}>
+                      <Collapse in={show[item.href]} appear={true}>
+                        <div
+                          className="lg:shadow-base overflow-hidden"
+                          onMouseLeave={handleHide}
+                        >
                           {item.children.map((child) => {
                             return (
                               <NavDropdown.Item
                                 href={child.href}
                                 key={child.href}
                                 className={cn([
-                                  "py-3 text-lg hover:text-primary",
+                                  "text-lg hover:text-primary md:py-1 lg:py-3",
                                   pathName === item.href && "text-primary",
                                 ])}
                               >
@@ -89,14 +92,13 @@ function SiteHeader() {
                 } else {
                   return (
                     <Nav.Link
-                      onMouseEnter={handleHide}
-                      onMouseLeave={handleHide}
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "mr-20  text-lg hover:text-primary",
+                        "mx-10 text-lg  hover:text-primary",
                         pathName === item.href && "text-primary",
                       ])}
+                      onMouseLeave={handleHide}
                     >
                       {item.title}
                       {item.children && <Icons.down className="ml-1" />}

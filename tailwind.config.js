@@ -12,13 +12,22 @@ module.exports = {
     },
     extend: {
       fontSize: {
+        xs: ["0.75rem", "0.75rem"],
         base: ["1rem", "1rem"],
         lg: ["1.25rem", "1.25rem"],
+      },
+      boxShadow: {
+        base: "box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;",
       },
       height: {
         130: "32.5rem",
       },
       colors: {
+        primary: "var(--primary)",
+        nornam: "var(--normal)",
+        gray: "var(--gray)",
+      },
+      backgroundColor: {
         primary: "var(--primary)",
         nornam: "var(--normal)",
         gray: "var(--gray)",

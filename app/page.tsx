@@ -1,4 +1,4 @@
-import { Button, Col, Container, Image, Row, Stack } from "react-bootstrap"
+import { Col, Container, Image, Row, Stack } from "react-bootstrap"
 
 const listData = [
   {
@@ -24,7 +24,7 @@ export default function IndexPage() {
       <div className="">
         <Image
           src="/images/banner.jpg"
-          className="h-130 w-full object-fill"
+          className="h-90 w-full object-fill"
           alt=""
         />
       </div>
@@ -40,7 +40,7 @@ export default function IndexPage() {
                     <Image src={item.img} alt="" className="h-12 w-12" />
                   </Col>
                   <Col>
-                    <Stack className="mb-2 text-lg font-bold text-nornam">
+                    <Stack className="mb-2	text-lg font-semibold text-nornam">
                       {item.title}
                     </Stack>
                     <Stack className="text-gray">{item.desc}</Stack>
