@@ -1,4 +1,4 @@
-// https://lucide.dev/icons/smile
+// https://lucide.dev/icons/
 import {
   ChevronDown,
   Moon,

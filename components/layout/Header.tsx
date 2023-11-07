@@ -77,7 +77,7 @@ function SiteHeader() {
                                 href={child.href}
                                 key={child.href}
                                 className={cn([
-                                  "text-lg hover:text-primary md:py-1 lg:py-3",
+                                  "text-md hover:text-primary md:py-1 lg:py-3",
                                   pathName === item.href && "text-primary",
                                 ])}
                               >

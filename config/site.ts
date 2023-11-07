@@ -14,12 +14,28 @@ export const siteConfig = {
       href: "/product",
       children: [
         {
-          title: "产品设计",
-          href: "/product/design",
+          title: "视觉呈现",
+          href: "/product/1",
         },
         {
-          title: "产品开发",
-          href: "/product/develop",
+          title: "网站开发与重构",
+          href: "/product/2",
+        },
+        {
+          title: "应用软件",
+          href: "/product/3",
+        },
+        {
+          title: "微信小程序",
+          href: "/product/4",
+        },
+        {
+          title: "移动应用",
+          href: "/product/5",
+        },
+        {
+          title: "服务器与硬件",
+          href: "/product/6",
         },
       ],
     },
@@ -28,12 +44,20 @@ export const siteConfig = {
       href: "/plan",
       children: [
         {
-          title: "智能制造",
-          href: "/plan",
+          title: "数据存储与计算",
+          href: "/plan/1",
         },
         {
-          title: "智能医疗",
-          href: "/plan",
+          title: "服务协议",
+          href: "/plan/2",
+        },
+        {
+          title: "教育/企业/商业网络构建",
+          href: "/plan/3",
+        },
+        {
+          title: "大数据分析与处理",
+          href: "/plan/4",
         },
       ],
     },
