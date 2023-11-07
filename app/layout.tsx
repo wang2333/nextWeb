@@ -1,4 +1,4 @@
-import "@/styles/bootstrap.scss"
+import "@/styles/bootstrap.min.css"
 import "@/styles/globals.css"
 import { Metadata } from "next"
 

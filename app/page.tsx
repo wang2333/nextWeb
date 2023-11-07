@@ -21,7 +21,7 @@ const listData = [
 export default function IndexPage() {
   return (
     <>
-      <div className="">
+      <div className="mx-auto max-w-10xl">
         <Image
           src="/images/banner.jpg"
           className="h-90 w-full object-fill"
@@ -54,36 +54,6 @@ export default function IndexPage() {
                   <Image
                     src="/images/arrow.jpg"
                     className="inline-block h-7 w-12"
-                    alt=""
-                  />
-                </Col>
-              )
-            }
-            return dom
-          })}
-        </Row>
-      </Container>
-
-      <Container className="block sm:hidden">
-        <Row className="flex h-32 w-full items-center justify-between">
-          {listData.map((item, index) => {
-            const isLast = index === listData.length - 1
-            let dom = [
-              <Col key={index}>
-                <Stack className="mb-2 flex items-center  text-lg">
-                  <Image src={item.img} alt="" className="h-10 w-10" />
-                </Stack>
-                <Stack className="mb-2 flex items-center text-base font-bold ">
-                  {item.title}
-                </Stack>
-              </Col>,
-            ]
-            if (!isLast) {
-              dom.push(
-                <Col xs="auto">
-                  <Image
-                    src="/images/arrow.jpg"
-                    className="inline-block h-7 w-7"
                     alt=""
                   />
                 </Col>

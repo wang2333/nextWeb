@@ -11,6 +11,9 @@ module.exports = {
       },
     },
     extend: {
+      maxWidth: {
+        "10xl": "1920px",
+      },
       fontSize: {
         xs: ["0.75rem", "0.75rem"],
         base: ["1rem", "1rem"],
@@ -31,11 +34,7 @@ module.exports = {
         primary: "var(--primary)",
         nornam: "var(--normal)",
         gray: "var(--gray)",
-      },
-      borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
+        black1: "var(--black)",
       },
       keyframes: {
         "accordion-down": {
