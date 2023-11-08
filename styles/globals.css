@@ -10,3 +10,35 @@
     --black: #0b1d2e;
   }
 }
+
+html {
+  font-size: 10px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
