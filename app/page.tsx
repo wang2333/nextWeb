@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Col, Container, Row, Stack } from "react-bootstrap"
 
+import FadeIn from "@/components/spring/FadeIn"
+
 const listData = [
   {
     title: "定制方案",
@@ -204,19 +206,21 @@ export default function IndexPage() {
                   xs={6}
                   md={3}
                 >
-                  <Image
-                    src={item.img}
-                    width={100}
-                    height={100}
-                    alt=""
-                    className="inline-block w-[85%] "
-                  />
-                  <div className="absolute left-[10%] top-[10%] w-[80%] text-left text-lg text-white md:left-[15%]">
-                    {item.title}
-                  </div>
-                  <div className="absolute left-[10%] top-[20%] hidden max-w-[12rem] text-left text-sm text-white md:left-[15%] md:inline-block">
-                    {item.desc}
-                  </div>
+                  <FadeIn>
+                    <Image
+                      src={item.img}
+                      width={100}
+                      height={100}
+                      alt=""
+                      className="inline-block w-[85%] "
+                    />
+                    <div className="absolute left-[10%] top-[10%] w-[80%] text-left text-lg text-white md:left-[15%]">
+                      {item.title}
+                    </div>
+                    <div className="absolute left-[10%] top-[20%] hidden max-w-[12rem] text-left text-sm text-white md:left-[15%] md:inline-block">
+                      {item.desc}
+                    </div>
+                  </FadeIn>
                 </Col>
               )
             })}
@@ -239,19 +243,21 @@ export default function IndexPage() {
                   key={item.title}
                   className="flex flex-col items-center justify-center text-center"
                 >
-                  <Image
-                    src={item.img}
-                    width={80}
-                    height={100}
-                    alt=""
-                    className="inline-block w-12 md:w-20"
-                  />
-                  <div className="mb-0 mt-6 text-center text-xl font-semibold md:mb-6">
-                    {item.title}
-                  </div>
-                  <div className="hidden w-[50%] text-center text-lg leading-8 md:inline-block">
-                    {item.desc}
-                  </div>
+                  <FadeIn>
+                    <Image
+                      src={item.img}
+                      width={80}
+                      height={100}
+                      alt=""
+                      className="inline-block w-12 md:w-20"
+                    />
+                    <div className="mb-0 mt-6 text-center text-xl font-semibold md:mb-6">
+                      {item.title}
+                    </div>
+                    <div className="hidden w-[50%] text-center text-lg leading-8 md:inline-block">
+                      {item.desc}
+                    </div>
+                  </FadeIn>
                 </Col>
               )
             })}

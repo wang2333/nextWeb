@@ -15,7 +15,7 @@ const FadeIn = ({ children }: FadeInProps) => {
 
   const styles = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0)" : "translateY(20px)",
+    transform: inView ? "translateY(0)" : "translateY(10rem)",
   })
 
   return (

@@ -27,7 +27,6 @@ const initDate: SiteHeaderProps = {
 
 function SiteHeader() {
   const pathName = usePathname()
-  console.log("👻 ~ pathName:", pathName)
   const [show, setShow] = React.useState<SiteHeaderProps>(initDate)
 
   const handleShow = (key: string) => {
