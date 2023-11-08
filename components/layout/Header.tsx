@@ -43,10 +43,14 @@ function SiteHeader() {
       <Navbar expand="lg" className="py-3">
         <Container className="2xl container">
           <Navbar.Brand href="/" className="block p-0">
-            <Image src="/images/logo.jpg" alt="logo" className="w-45 h-10" />
+            <Image
+              src="/images/logo.jpg"
+              alt="logo"
+              className="h-[34px] md:h-[40px]"
+            />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-3" />
 
           <Navbar.Collapse id="basic-navbar-nav" className="mt-2 w-full">
             <Nav>

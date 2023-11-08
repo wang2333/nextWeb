@@ -38,7 +38,7 @@ function Footer() {
   return (
     <div className=" bg-black1 ">
       <Container className="container pt-16 ">
-        <Row>
+        <Row className="m-0">
           <Col md={2} className="left hidden pr-20 md:inline-block">
             <Image
               src="/images/logo2.png"
@@ -52,15 +52,16 @@ function Footer() {
               4001-100-866 转1
             </div>
           </Col>
+
           <Col
             xs={12}
             md={8}
-            className="mid justify-between border-l border-l-slate-800 pl-20 text-gray"
+            className="mid justify-between border-l border-l-slate-800 pl-0 text-gray md:pl-20"
           >
-            <Row>
+            <Row className="m-0">
               {footData.map((item) => {
                 return (
-                  <Col className="item" key={item.title}>
+                  <Col className="item " key={item.title}>
                     <div className="title mb-3 font-semibold text-white">
                       {item.title}
                     </div>
@@ -78,6 +79,7 @@ function Footer() {
               })}
             </Row>
           </Col>
+
           <Col md={2} className="right hidden md:inline-block">
             <div className="mb-3 text-gray">智云创想公众号</div>
             <span className="inline-block h-28 w-28 bg-white"></span>

@@ -1,5 +1,9 @@
 .header {
   :global {
+    .navbar-toggler-icon {
+      width: 20px;
+      height: 20px;
+    }
     .dropdown-menu {
       border: none;
       padding: 0;

@@ -135,20 +135,20 @@ export default function IndexPage() {
           backgroundImage: "url(/images/beiji.png)",
           backgroundSize: "100% 100%",
         }}
-        className="pb-14"
+        className=" px-7 pb-14"
       >
         <div className="font-600 py-8 text-center text-[2.5rem] md:py-14">
           专业物联网解决方案，倾力满足行业所需
         </div>
 
         <div className="card container">
-          <div className="border-b border-b-slate-400 py-7 text-center text-[1.5rem] font-semibold">
+          <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             智慧 + 产品
           </div>
-          <Row className="py-16">
+          <Row className="m-0 py-12">
             {listData2.map((item, index) => {
               return (
-                <Col key={item.title} className="p-0 text-center" xs={6} sm={2}>
+                <Col key={item.title} className="p-0 text-center" xs={4} sm={2}>
                   <div className="relative mx-auto h-36 w-36 text-center">
                     <Image
                       src={item.img}
@@ -158,8 +158,10 @@ export default function IndexPage() {
                       style={{ objectFit: "contain" }}
                     />
                   </div>
-                  <div className=" mb-2 mt-8 text-lg">{item.title}</div>
-                  <div className="text-sm">{item.desc}</div>
+                  <div className=" mb-2 mt-8 pl-5 text-left text-lg">
+                    {item.title}
+                  </div>
+                  <div className="pl-5 text-left text-sm">{item.desc}</div>
                 </Col>
               )
             })}
@@ -167,29 +169,29 @@ export default function IndexPage() {
         </div>
 
         <div className="card container mt-20">
-          <div className="border-b border-b-slate-400 py-7 text-center text-[1.5rem] font-semibold">
+          <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             智慧 + 解决方案
           </div>
-          <Row className="py-16">
+          <Row className="m-0 pb-8 pt-12">
             {listData3.map((item, index) => {
               return (
                 <Col
                   key={item.title}
-                  className="relative mb-10 h-80 p-0 text-center md:mb-0"
+                  className="relative mb-5 p-0 text-center "
                   xs={6}
                   md={3}
                 >
                   <Image
                     src={item.img}
-                    fill={true}
+                    width={100}
+                    height={100}
                     alt=""
-                    className="inline-block"
-                    style={{ objectFit: "contain" }}
+                    className="inline-block w-[85%] "
                   />
-                  <div className="absolute left-20 top-14 text-lg text-white">
+                  <div className="absolute left-[10%] top-[18%] text-lg text-white md:left-[15%]">
                     {item.title}
                   </div>
-                  <div className="absolute left-20 top-24 max-w-[12rem] text-left text-sm text-white">
+                  <div className="absolute left-[10%] top-[28%] max-w-[12rem] text-left text-sm text-white md:left-[15%]">
                     {item.desc}
                   </div>
                 </Col>
