@@ -72,6 +72,23 @@ const listData3 = [
     img: "/images/010.png",
   },
 ]
+const listData4 = [
+  {
+    img: "/images/icon5.png",
+    title: "热情耐心",
+    desc: "我们相信对客户热情耐心是最好的销售法则。",
+  },
+  {
+    img: "/images/icon6.png",
+    title: "专业专注",
+    desc: "把每一件产品当作我们的代表作，精雕细琢。",
+  },
+  {
+    img: "/images/icon7.png",
+    title: "技术支持",
+    desc: "365天免费维护，技术是起点，满意是终点。",
+  },
+]
 
 export default function IndexPage() {
   return (
@@ -120,7 +137,7 @@ export default function IndexPage() {
                     src="/images/arrow.jpg"
                     width={50}
                     height={50}
-                    className="inline-block h-7 w-12"
+                    className="inline-block w-8 md:w-12"
                     alt=""
                   />
                 </Col>
@@ -142,8 +159,8 @@ export default function IndexPage() {
         <div className="font-600 hidden py-14 text-center text-[2.5rem] md:block">
           专业物联网解决方案，倾力满足行业所需
         </div>
-        <div className="font-600 py-5 text-center text-lg md:hidden">
-          <p className="mb-2">专业物联网解决方案</p>
+        <div className="font-600 py-6 text-center text-2xl  md:hidden">
+          <p className="mb-2 ">专业物联网解决方案</p>
           <p>倾力满足行业所需</p>
         </div>
 
@@ -205,6 +222,45 @@ export default function IndexPage() {
             })}
           </Row>
         </div>
+      </div>
+
+      <div
+        style={{
+          backgroundColor: "#f2f6fa",
+          backgroundImage: "url(/images/beiji2.png)",
+          backgroundSize: "100% 100%",
+        }}
+      >
+        <Container className="container py-8 md:py-32">
+          <Row>
+            {listData4.map((item) => {
+              return (
+                <Col
+                  key={item.title}
+                  className="flex flex-col items-center justify-center text-center"
+                >
+                  <Image
+                    src={item.img}
+                    width={80}
+                    height={100}
+                    alt=""
+                    className="inline-block w-12 md:w-20"
+                  />
+                  <div className=" my-6 text-center text-xl font-semibold">
+                    {item.title}
+                  </div>
+                  <div className="hidden w-[50%] text-center text-lg leading-8 md:inline-block">
+                    {item.desc}
+                  </div>
+                </Col>
+              )
+            })}
+          </Row>
+        </Container>
+      </div>
+
+      <div className="relative h-20 md:h-32">
+        <Image src="/images/beiji3.png" fill alt=""></Image>
       </div>
     </>
   )

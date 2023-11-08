@@ -40,19 +40,19 @@ function SiteHeader() {
   }
   return (
     <header id="header" className={Style.header}>
-      <Navbar expand="lg" className="py-3">
+      <Navbar expand="lg" className="py-4">
         <Container className="2xl container">
-          <Navbar.Brand href="/" className="block p-0">
+          <Navbar.Brand href="/" className="ml-5 block p-0 md:ml-0">
             <Image
               src="/images/logo.jpg"
               alt="logo"
-              className="h-[34px] md:h-[40px]"
+              className="h-[34px] md:h-[45px]"
             />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-3" />
 
-          <Navbar.Collapse id="basic-navbar-nav" className="mt-2 w-full">
+          <Navbar.Collapse id="basic-navbar-nav" className="pt-2 md:pt-0">
             <Nav>
               {siteConfig.mainNav.map((item) => {
                 if (item.children) {
@@ -62,7 +62,7 @@ function SiteHeader() {
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "mx-10 text-lg hover:text-primary",
+                        "mx-10 text-xl hover:text-primary",
                         pathName === item.href && "text-primary",
                       ])}
                       show={show[item.href]}
@@ -81,7 +81,7 @@ function SiteHeader() {
                                 href={child.href}
                                 key={child.href}
                                 className={cn([
-                                  "text-md py-2 hover:text-primary md:py-3",
+                                  "py-2 text-lg hover:text-primary md:py-3",
                                   pathName === item.href && "text-primary",
                                 ])}
                               >
@@ -99,7 +99,7 @@ function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "mx-10 text-lg  hover:text-primary",
+                        "mx-10 text-xl  hover:text-primary",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}
