@@ -15,27 +15,27 @@ export const siteConfig = {
       children: [
         {
           title: "视觉呈现",
-          href: "/product/1",
+          href: "/product/visual",
         },
         {
           title: "网站开发与重构",
-          href: "/product/2",
+          href: "/product/web",
         },
         {
           title: "应用软件",
-          href: "/product/3",
+          href: "/product/application",
         },
         {
           title: "微信小程序",
-          href: "/product/4",
+          href: "/product/weChat",
         },
         {
           title: "移动应用",
-          href: "/product/5",
+          href: "/product/mobile",
         },
         {
           title: "服务器与硬件",
-          href: "/product/6",
+          href: "/product/server",
         },
       ],
     },
@@ -45,19 +45,19 @@ export const siteConfig = {
       children: [
         {
           title: "数据存储与计算",
-          href: "/plan/1",
+          href: "/plan/dataStorage",
         },
         {
           title: "服务协议",
-          href: "/plan/2",
+          href: "/plan/protocol",
         },
         {
           title: "教育/企业/商业网络构建",
-          href: "/plan/3",
+          href: "/plan/network",
         },
         {
           title: "大数据分析与处理",
-          href: "/plan/4",
+          href: "/plan/bigData",
         },
       ],
     },

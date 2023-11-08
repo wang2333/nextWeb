@@ -27,6 +27,7 @@ const initDate: SiteHeaderProps = {
 
 function SiteHeader() {
   const pathName = usePathname()
+  console.log("👻 ~ pathName:", pathName)
   const [show, setShow] = React.useState<SiteHeaderProps>(initDate)
 
   const handleShow = (key: string) => {
@@ -82,7 +83,7 @@ function SiteHeader() {
                                 key={child.href}
                                 className={cn([
                                   "py-3 text-lg  hover:text-primary md:py-4",
-                                  pathName === item.href && "text-primary",
+                                  pathName === child.href && "text-primary",
                                 ])}
                               >
                                 {child.title}
@@ -99,7 +100,7 @@ function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "mx-10 py-3 text-xl hover:text-primary md:py-0",
+                        "mx-10 py-3 text-xl text-nornam hover:text-primary md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}
