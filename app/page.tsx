@@ -137,7 +137,7 @@ export default function IndexPage() {
         }}
         className="pb-14"
       >
-        <div className="font-600 pb-20 pt-24 text-center text-[2.5rem]">
+        <div className="font-600 py-8 text-center text-[2.5rem] md:py-14">
           专业物联网解决方案，倾力满足行业所需
         </div>
 
@@ -148,7 +148,7 @@ export default function IndexPage() {
           <Row className="py-16">
             {listData2.map((item, index) => {
               return (
-                <Col key={item.title} className="p-0 text-center">
+                <Col key={item.title} className="p-0 text-center" xs={6} sm={2}>
                   <div className="relative mx-auto h-36 w-36 text-center">
                     <Image
                       src={item.img}
@@ -173,7 +173,12 @@ export default function IndexPage() {
           <Row className="py-16">
             {listData3.map((item, index) => {
               return (
-                <Col key={item.title} className="relative h-80 p-0 text-center">
+                <Col
+                  key={item.title}
+                  className="relative mb-10 h-80 p-0 text-center md:mb-0"
+                  xs={6}
+                  md={3}
+                >
                   <Image
                     src={item.img}
                     fill={true}
