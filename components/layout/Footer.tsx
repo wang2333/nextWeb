@@ -26,12 +26,12 @@ const footData = [
     ],
   },
   {
-    title: "联系洽谈",
-    childRen: ["+15926269363"],
-  },
-  {
     title: "智云动态",
     childRen: ["2023互联网大会", "大数据与AI智能", "参加计算机算法活动"],
+  },
+  {
+    title: "联系洽谈",
+    childRen: ["+15926269363"],
   },
 ]
 function Footer() {

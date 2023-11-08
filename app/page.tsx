@@ -86,14 +86,14 @@ export default function IndexPage() {
         />
       </div>
 
-      <Container className="container hidden lg:block">
-        <Row className="flex h-32 w-full items-center justify-between">
+      <Container className="container">
+        <Row className=" m-0 h-32 w-full">
           {listData.map((item, index) => {
             const isLast = index === listData.length - 1
             let dom = [
               <Col className="flex justify-center" key={index}>
-                <Row className="flex items-center">
-                  <Col xl="auto">
+                <Row className="content-evenly items-center">
+                  <Col xl="auto" className=" flex justify-center">
                     <Image
                       src={item.img}
                       width={50}
@@ -103,17 +103,19 @@ export default function IndexPage() {
                     />
                   </Col>
                   <Col>
-                    <Stack className="mb-2	text-lg font-semibold text-nornam">
+                    <Stack className="mb-2 text-center text-lg font-semibold text-nornam md:text-left">
                       {item.title}
                     </Stack>
-                    <Stack className="text-gray">{item.desc}</Stack>
+                    <Stack className="hidden text-gray md:inline-block">
+                      {item.desc}
+                    </Stack>
                   </Col>
                 </Row>
               </Col>,
             ]
             if (!isLast) {
               dom.push(
-                <Col xs="auto" className="mx-10">
+                <Col xs="auto" className="flex items-center p-0 md:mx-5">
                   <Image
                     src="/images/arrow.jpg"
                     width={50}
@@ -137,15 +139,19 @@ export default function IndexPage() {
         }}
         className=" px-7 pb-14"
       >
-        <div className="font-600 py-8 text-center text-[2.5rem] md:py-14">
+        <div className="font-600 hidden py-14 text-center text-[2.5rem] md:block">
           专业物联网解决方案，倾力满足行业所需
+        </div>
+        <div className="font-600 py-5 text-center text-lg md:hidden">
+          <p className="mb-2">专业物联网解决方案</p>
+          <p>倾力满足行业所需</p>
         </div>
 
         <div className="card container">
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             智慧 + 产品
           </div>
-          <Row className="m-0 py-12">
+          <Row className="m-0 pb-6 pt-12 md:pb-12">
             {listData2.map((item, index) => {
               return (
                 <Col key={item.title} className="p-0 text-center" xs={4} sm={2}>
@@ -158,10 +164,10 @@ export default function IndexPage() {
                       style={{ objectFit: "contain" }}
                     />
                   </div>
-                  <div className=" mb-2 mt-8 pl-5 text-left text-lg">
-                    {item.title}
+                  <div className=" my-4 text-center text-lg">{item.title}</div>
+                  <div className="hidden text-center text-sm md:inline-block">
+                    {item.desc}
                   </div>
-                  <div className="pl-5 text-left text-sm">{item.desc}</div>
                 </Col>
               )
             })}
@@ -172,7 +178,7 @@ export default function IndexPage() {
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             智慧 + 解决方案
           </div>
-          <Row className="m-0 pb-8 pt-12">
+          <Row className="m-0 pb-6 pt-12">
             {listData3.map((item, index) => {
               return (
                 <Col
@@ -188,10 +194,10 @@ export default function IndexPage() {
                     alt=""
                     className="inline-block w-[85%] "
                   />
-                  <div className="absolute left-[10%] top-[18%] text-lg text-white md:left-[15%]">
+                  <div className="absolute left-[10%] top-[10%] w-[80%] text-left text-lg text-white md:left-[15%]">
                     {item.title}
                   </div>
-                  <div className="absolute left-[10%] top-[28%] max-w-[12rem] text-left text-sm text-white md:left-[15%]">
+                  <div className="absolute left-[10%] top-[20%] hidden max-w-[12rem] text-left text-sm text-white md:left-[15%] md:inline-block">
                     {item.desc}
                   </div>
                 </Col>
