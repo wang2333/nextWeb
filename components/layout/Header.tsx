@@ -52,8 +52,8 @@ function SiteHeader() {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-3" />
 
-          <Navbar.Collapse id="basic-navbar-nav" className="pt-2 md:pt-0">
-            <Nav>
+          <Navbar.Collapse id="basic-navbar-nav" className="pt-3 md:pt-0">
+            <Nav className="flex items-start md:items-center">
               {siteConfig.mainNav.map((item) => {
                 if (item.children) {
                   return (
@@ -62,7 +62,7 @@ function SiteHeader() {
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "mx-10 text-xl hover:text-primary",
+                        "mx-10 py-3 text-xl hover:text-primary md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       show={show[item.href]}
@@ -81,7 +81,7 @@ function SiteHeader() {
                                 href={child.href}
                                 key={child.href}
                                 className={cn([
-                                  "py-2 text-lg hover:text-primary md:py-3",
+                                  "py-3 text-lg  hover:text-primary md:py-4",
                                   pathName === item.href && "text-primary",
                                 ])}
                               >
@@ -99,7 +99,7 @@ function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "mx-10 text-xl  hover:text-primary",
+                        "mx-10 py-3 text-xl hover:text-primary md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}

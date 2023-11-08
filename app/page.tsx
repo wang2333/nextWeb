@@ -120,7 +120,7 @@ export default function IndexPage() {
                     />
                   </Col>
                   <Col>
-                    <Stack className="mb-2 text-center text-lg font-semibold text-nornam md:text-left">
+                    <Stack className="mb-0 text-center text-lg font-semibold text-nornam md:mb-2 md:text-left">
                       {item.title}
                     </Stack>
                     <Stack className="hidden text-gray md:inline-block">
@@ -246,7 +246,7 @@ export default function IndexPage() {
                     alt=""
                     className="inline-block w-12 md:w-20"
                   />
-                  <div className=" my-6 text-center text-xl font-semibold">
+                  <div className="mb-0 mt-6 text-center text-xl font-semibold md:mb-6">
                     {item.title}
                   </div>
                   <div className="hidden w-[50%] text-center text-lg leading-8 md:inline-block">
