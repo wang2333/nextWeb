@@ -62,7 +62,7 @@ function SiteHeader() {
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "mx-10 py-3 text-xl hover:text-primary md:py-0",
+                        "mx-10 py-1 text-xl hover:text-primary md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       show={show[item.href]}

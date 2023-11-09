@@ -37,7 +37,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-96">
+      <div className="relative h-52 md:h-130">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

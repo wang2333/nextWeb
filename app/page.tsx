@@ -184,7 +184,7 @@ export default function IndexPage() {
                     />
                   </div>
                   <div className=" my-4 text-center text-lg">{item.title}</div>
-                  <div className="hidden text-center text-sm md:inline-block">
+                  <div className="text-md hidden text-center md:inline-block">
                     {item.desc}
                   </div>
                 </Col>
@@ -217,7 +217,7 @@ export default function IndexPage() {
                     <div className="absolute left-[10%] top-[10%] w-[80%] text-left text-lg text-white md:left-[15%]">
                       {item.title}
                     </div>
-                    <div className="absolute left-[10%] top-[20%] hidden max-w-[12rem] text-left text-sm text-white md:left-[15%] md:inline-block">
+                    <div className="text-md absolute left-[10%] top-[20%] hidden max-w-[15rem] text-left text-white md:left-[15%] md:inline-block">
                       {item.desc}
                     </div>
                   </FadeIn>
