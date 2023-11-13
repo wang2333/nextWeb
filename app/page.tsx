@@ -6,7 +6,14 @@ import { Col, Container, Row, Stack } from "react-bootstrap"
 
 import FadeIn from "@/components/spring/FadeIn"
 
-const listData = [
+interface ListData {
+  title: string
+  desc: string
+  img: string
+  herf?: string
+}
+
+const listData: ListData[] = [
   {
     title: "定制方案",
     desc: "项目组充分探讨，提出解决方案， 再与您确定方案的适用性。",
@@ -23,7 +30,7 @@ const listData = [
     img: "/images/icon3.jpg",
   },
 ]
-const listData2 = [
+const listData2: ListData[] = [
   {
     title: "视觉呈现",
     desc: "网站设计与移动应用UI设计",
@@ -61,61 +68,61 @@ const listData2 = [
     herf: "/product/server",
   },
 ]
-const listData3 = [
+const listData3: ListData[] = [
   {
     title: "广告传媒存储与计算",
     desc: "网站设计与移动应用UI设计",
     img: "/images/007.png",
-    href: "/plan/dataStorage",
+    herf: "/plan/dataStorage",
   },
   {
     title: "机房建设",
     desc: "网站设计与移动应用UI设计",
     img: "/images/009.png",
-    href: "/plan/protocol",
+    herf: "/plan/protocol",
   },
   {
     title: "教育/企业/商业网络构建",
     desc: "应用软件、网站开发、小程序、移动应用",
     img: "/images/008.png",
-    href: "/plan/network",
+    herf: "/plan/network",
   },
 
   {
     title: "大数据分析与处理",
     desc: "应用软件、网站开发小程序、移动应用",
     img: "/images/010.png",
-    href: "/plan/bigData",
+    herf: "/plan/bigData",
   },
 ]
-const listData4 = [
+const listData4: ListData[] = [
   {
     title: "数据治理中台",
     desc: "网站设计与移动应用UI设计",
     img: "/images/banners/002.jpg",
-    href: "/case/dataGovernance",
+    herf: "/case/dataGovernance",
   },
   {
     title: "日志运维移动端",
     desc: "网站设计与移动应用UI设计",
     img: "/images/banners/004.jpg",
-    href: "/case/log",
+    herf: "/case/log",
   },
   {
     title: "HN智慧气象系统",
     desc: "应用软件、网站开发、小程序、移动应用",
     img: "/images/banners/006.jpg",
-    href: "/case/weather",
+    herf: "/case/weather",
   },
 
   {
     title: "轻松买小程序",
     desc: "应用软件、网站开发小程序、移动应用",
     img: "/images/banners/009.jpg",
-    href: "/case/buy",
+    herf: "/case/buy",
   },
 ]
-const listData5 = [
+const listData5: ListData[] = [
   {
     title: "湖北经视文化传播有限公司",
     desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
@@ -147,7 +154,7 @@ const listData5 = [
     img: "/images/banners/002.jpg",
   },
 ]
-const listData6 = [
+const listData6: ListData[] = [
   {
     img: "/images/icon5.png",
     title: "热情耐心",
@@ -252,7 +259,7 @@ export default function IndexPage() {
                   className="cursor-pointer p-0 text-center"
                   xs={4}
                   sm={2}
-                  onClick={() => router.push(item.herf)}
+                  onClick={() => item.herf && router.push(item.herf)}
                 >
                   <div className="relative mx-auto h-36 w-36 text-center">
                     <Image
@@ -285,7 +292,7 @@ export default function IndexPage() {
                   className="relative mb-5 cursor-pointer p-0 text-center"
                   xs={6}
                   md={3}
-                  onClick={() => router.push(item.href)}
+                  onClick={() => item.herf && router.push(item.herf)}
                 >
                   <FadeIn>
                     <Image
@@ -320,7 +327,7 @@ export default function IndexPage() {
                   className=" cursor-pointer rounded-md  text-center "
                   xs={6}
                   sm={3}
-                  onClick={() => router.push(item.href)}
+                  onClick={() => item.herf && router.push(item.herf)}
                 >
                   <FadeIn className="mb-0 rounded-md bg-white p-4">
                     <Image
@@ -355,7 +362,7 @@ export default function IndexPage() {
                   sm={4}
                   key={item.title}
                   className="m-0 cursor-pointer rounded-md  text-center "
-                  onClick={() => router.push(item.href)}
+                  onClick={() => item.herf && router.push(item.herf)}
                 >
                   <FadeIn className="mb-4 rounded-md bg-white p-4 ">
                     <Image
