@@ -5,7 +5,7 @@ import Card from "@/components/Card"
 
 const pageData = [
   {
-    title: "数据存储与计算",
+    title: "广告传媒数据存储与计算",
     img: "/images/banners/015.jpg",
     desc: [
       "服务器在传媒企业中扮演着不可或缺的角色，如何利用服务器来提高视频存储和剪辑的效率和质量。",

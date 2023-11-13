@@ -2,8 +2,6 @@ import React from "react"
 import Image from "next/image"
 import { Col, Container, Row } from "react-bootstrap"
 
-import Card from "@/components/Card"
-
 const pageData = [
   {
     title: "研发副总裁张伟出席广东省第一节数据应用技术高端研讨会",

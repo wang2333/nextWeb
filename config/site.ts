@@ -44,11 +44,11 @@ export const siteConfig = {
       href: "/plan",
       children: [
         {
-          title: "数据存储与计算",
+          title: "广告传媒数据存储与计算",
           href: "/plan/dataStorage",
         },
         {
-          title: "服务协议",
+          title: "机房建设",
           href: "/plan/protocol",
         },
         {

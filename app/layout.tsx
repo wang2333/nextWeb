@@ -32,9 +32,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body className='antialiased" bg-background min-h-screen font-sans'>
-        <div className="relative flex min-h-screen flex-col">
+        <div className="relative flex h-screen flex-col">
           <Header />
-          <div className="flex-1">{children}</div>
+          <div className="flex-1  pt-[75px]">{children}</div>
           <Footer />
         </div>
         <TailwindIndicator />

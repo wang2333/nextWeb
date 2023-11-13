@@ -13,8 +13,14 @@ const Card: React.FC<CardProps> = ({ title, img, desc }) => {
       <span className="inline-block  text-xl font-semibold ">{title}</span>
       <div className="my-5 h-1 w-36 bg-blue-500"></div>
       {img && (
-        <div className="relative mb-5 block h-52 md:h-130">
-          <Image src={img} fill alt="" />
+        <div className="relative mb-5 block">
+          <Image
+            src={img}
+            alt=""
+            width={1500}
+            height={500}
+            className="w-full"
+          />
         </div>
       )}
       {desc.map((item, index) => (

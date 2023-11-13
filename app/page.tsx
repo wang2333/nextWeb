@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { Col, Container, Row, Stack } from "react-bootstrap"
 
 import FadeIn from "@/components/spring/FadeIn"
@@ -25,31 +28,37 @@ const listData2 = [
     title: "视觉呈现",
     desc: "网站设计与移动应用UI设计",
     img: "/images/001.jpg",
+    herf: "/product/visual",
   },
   {
     title: "网站开发与重构",
     desc: "应用软件、网站开发、小程序、移动应用",
     img: "/images/002.jpg",
+    herf: "/product/web",
   },
   {
     title: "应用软件",
     desc: "数据采集、数据分析、数据应用",
     img: "/images/003.jpg",
+    herf: "/product/application",
   },
   {
     title: "微信小程序",
     desc: "数据采集，数据分析、数据应用",
     img: "/images/004.jpg",
+    herf: "/product/weChat",
   },
   {
     title: "移动应用",
     desc: "数据采集、数据分析、数据应用",
     img: "/images/005.jpg",
+    herf: "/product/mobile",
   },
   {
     title: "服务器硬件",
     desc: "网站设计与移动应用UI设计",
     img: "/images/006.jpg",
+    herf: "/product/server",
   },
 ]
 const listData3 = [
@@ -57,24 +66,88 @@ const listData3 = [
     title: "广告传媒存储与计算",
     desc: "网站设计与移动应用UI设计",
     img: "/images/007.png",
-  },
-  {
-    title: "教育/企业/商业网络构建",
-    desc: "应用软件、网站开发、小程序、移动应用",
-    img: "/images/008.png",
+    href: "/plan/dataStorage",
   },
   {
     title: "机房建设",
     desc: "网站设计与移动应用UI设计",
     img: "/images/009.png",
+    href: "/plan/protocol",
   },
   {
-    title: "大数据分析与应用",
+    title: "教育/企业/商业网络构建",
+    desc: "应用软件、网站开发、小程序、移动应用",
+    img: "/images/008.png",
+    href: "/plan/network",
+  },
+
+  {
+    title: "大数据分析与处理",
     desc: "应用软件、网站开发小程序、移动应用",
     img: "/images/010.png",
+    href: "/plan/bigData",
   },
 ]
 const listData4 = [
+  {
+    title: "数据治理中台",
+    desc: "网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+    href: "/case/dataGovernance",
+  },
+  {
+    title: "日志运维移动端",
+    desc: "网站设计与移动应用UI设计",
+    img: "/images/banners/004.jpg",
+    href: "/case/log",
+  },
+  {
+    title: "HN智慧气象系统",
+    desc: "应用软件、网站开发、小程序、移动应用",
+    img: "/images/banners/006.jpg",
+    href: "/case/weather",
+  },
+
+  {
+    title: "轻松买小程序",
+    desc: "应用软件、网站开发小程序、移动应用",
+    img: "/images/banners/009.jpg",
+    href: "/case/buy",
+  },
+]
+const listData5 = [
+  {
+    title: "湖北经视文化传播有限公司",
+    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+  },
+  {
+    title: "湖北经视文化传播有限公司",
+    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+  },
+  {
+    title: "湖北经视文化传播有限公司",
+    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+  },
+  {
+    title: "湖北经视文化传播有限公司",
+    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+  },
+  {
+    title: "湖北经视文化传播有限公司",
+    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+  },
+  {
+    title: "湖北经视文化传播有限公司",
+    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
+    img: "/images/banners/002.jpg",
+  },
+]
+const listData6 = [
   {
     img: "/images/icon5.png",
     title: "热情耐心",
@@ -93,6 +166,7 @@ const listData4 = [
 ]
 
 export default function IndexPage() {
+  const router = useRouter()
   return (
     <>
       <div className="mx-auto ">
@@ -173,7 +247,13 @@ export default function IndexPage() {
           <Row className="m-0 pb-6 pt-12 md:pb-12">
             {listData2.map((item, index) => {
               return (
-                <Col key={item.title} className="p-0 text-center" xs={4} sm={2}>
+                <Col
+                  key={item.title}
+                  className="cursor-pointer p-0 text-center"
+                  xs={4}
+                  sm={2}
+                  onClick={() => router.push(item.herf)}
+                >
                   <div className="relative mx-auto h-36 w-36 text-center">
                     <Image
                       src={item.img}
@@ -202,9 +282,10 @@ export default function IndexPage() {
               return (
                 <Col
                   key={item.title}
-                  className="relative mb-5 p-0 text-center "
+                  className="relative mb-5 cursor-pointer p-0 text-center"
                   xs={6}
                   md={3}
+                  onClick={() => router.push(item.href)}
                 >
                   <FadeIn>
                     <Image
@@ -226,6 +307,76 @@ export default function IndexPage() {
             })}
           </Row>
         </div>
+
+        <div className="card container  mt-20">
+          <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
+            实践案例
+          </div>
+          <Row className="m-0 bg-zinc-100 py-6 md:pb-6">
+            {listData4.map((item, index) => {
+              return (
+                <Col
+                  key={item.title}
+                  className=" cursor-pointer rounded-md  text-center "
+                  xs={6}
+                  sm={3}
+                  onClick={() => router.push(item.href)}
+                >
+                  <FadeIn className="mb-0 rounded-md bg-white p-4">
+                    <Image
+                      src={item.img}
+                      width={300}
+                      height={200}
+                      alt=""
+                      className="inline-block h-full w-full"
+                    />
+                    <div className=" my-4 text-center text-lg">
+                      {item.title}
+                    </div>
+                    {/* <div className="text-md hidden text-center md:inline-block">
+                      {item.desc}
+                    </div> */}
+                  </FadeIn>
+                </Col>
+              )
+            })}
+          </Row>
+        </div>
+
+        <div className="card container  mt-20">
+          <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
+            我们的合作伙伴
+          </div>
+          <Row className="m-0 bg-zinc-100 py-6 md:pb-6">
+            {listData5.map((item, index) => {
+              return (
+                <Col
+                  xs={6}
+                  sm={4}
+                  key={item.title}
+                  className="m-0 cursor-pointer rounded-md  text-center "
+                  onClick={() => router.push(item.href)}
+                >
+                  <FadeIn className="mb-4 rounded-md bg-white p-4 ">
+                    <Image
+                      src={item.img}
+                      width={300}
+                      height={200}
+                      alt=""
+                      className="inline-block h-full w-full"
+                    />
+                    <div className=" my-4 text-center text-lg">
+                      {item.title}
+                    </div>
+                    <div className="hidden text-left text-sm md:inline-block">
+                      {item.desc}
+                    </div>
+                  </FadeIn>
+                </Col>
+              )
+            })}
+          </Row>
+        </div>
       </div>
 
       <div
@@ -237,7 +388,7 @@ export default function IndexPage() {
       >
         <Container className="container py-8 md:py-32">
           <Row>
-            {listData4.map((item) => {
+            {listData6.map((item) => {
               return (
                 <Col
                   key={item.title}

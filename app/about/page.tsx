@@ -25,8 +25,14 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
-        <Image src="/images/beiji5.png" fill alt="" />
+      <div className="relative">
+        <Image
+          src="/images/beiji5.png"
+          alt=""
+          width={1500}
+          height={350}
+          className="w-full"
+        />
       </div>
 
       {pageData.map((item, index) => (

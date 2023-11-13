@@ -40,7 +40,7 @@ function SiteHeader() {
   }
   return (
     <header id="header" className={Style.header}>
-      <Navbar expand="lg" className="py-4">
+      <Navbar expand="lg" className="py-[15px]">
         <Container className="2xl container">
           <Navbar.Brand href="/" className="ml-5 block p-0 md:ml-0">
             <Image
