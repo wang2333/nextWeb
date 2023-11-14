@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "教育/企业/商业网络构建",
-    img: "/images/banners/017.jpg",
+    img: "/images/banners/017.png",
     desc: [
       "在当今数字化的时代，建立一个可靠、高效的局域网对学校、企业和购物中心等场所来说至关重要。本文将为您介绍如何构建稳定的局域网，提升网络连接品质，实现更好的工作和学习环境。",
       " ",
@@ -53,7 +53,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "广告传媒数据存储与计算",
-    img: "/images/banners/015.jpg",
+    img: "/images/banners/015.png",
     desc: [
       "服务器在传媒企业中扮演着不可或缺的角色，如何利用服务器来提高视频存储和剪辑的效率和质量。",
       "一、视频存储的挑战与需求",
@@ -31,7 +31,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "轻松买小程序",
-    img: "/images/banners/009.jpg",
+    img: "/images/banners/009.png",
     desc: [
       "简要描述：",
       "定制开发微信在线小程序，为用户提供智能推荐，健康标签，配送追踪等贴心的选菜/配送服务，让客户足不出户，买到新鲜时令的心仪菜品。",
@@ -23,7 +23,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "网站开发与重构",
-    img: "/images/banners/010.jpg",
+    img: "/images/banners/010.png",
     desc: [
       "在互联网时代，拥有一个精致、现代化的网站已经成为各个企业和个人展示形象、扩大影响力的必备工具。无论您想要开发全新的网站，还是对现有网站进行修复和改进，我们都愿意为您提供专业的网站开发与重构服务。",
       " ",
@@ -36,7 +36,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

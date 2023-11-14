@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { Col, Container, Row, Stack } from "react-bootstrap"
+import { Carousel, Col, Container, Row, Stack } from "react-bootstrap"
 
 import FadeIn from "@/components/spring/FadeIn"
 
@@ -62,7 +62,7 @@ const listData2: ListData[] = [
     herf: "/product/mobile",
   },
   {
-    title: "服务器硬件",
+    title: "服务器与硬件",
     desc: "网站设计与移动应用UI设计",
     img: "/images/006.jpg",
     herf: "/product/server",
@@ -99,26 +99,26 @@ const listData4: ListData[] = [
   {
     title: "数据治理中台",
     desc: "网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
+    img: "/images/banners/002.png",
     herf: "/case/dataGovernance",
   },
   {
     title: "日志运维移动端",
     desc: "网站设计与移动应用UI设计",
-    img: "/images/banners/004.jpg",
+    img: "/images/banners/004.png",
     herf: "/case/log",
   },
   {
     title: "HN智慧气象系统",
     desc: "应用软件、网站开发、小程序、移动应用",
-    img: "/images/banners/006.jpg",
+    img: "/images/banners/006.png",
     herf: "/case/weather",
   },
 
   {
     title: "轻松买小程序",
     desc: "应用软件、网站开发小程序、移动应用",
-    img: "/images/banners/009.jpg",
+    img: "/images/banners/009.png",
     herf: "/case/buy",
   },
 ]
@@ -126,32 +126,27 @@ const listData5: ListData[] = [
   {
     title: "湖北经视文化传播有限公司",
     desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
+    img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
     desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
+    img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
     desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
+    img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
     desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
+    img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
     desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
-  },
-  {
-    title: "湖北经视文化传播有限公司",
-    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
-    img: "/images/banners/002.jpg",
+    img: "/images/banners/002.png",
   },
 ]
 const listData6: ListData[] = [
@@ -177,13 +172,44 @@ export default function IndexPage() {
   return (
     <>
       <div className="mx-auto ">
-        <Image
-          src="/images/banner.jpg"
-          className="h-90 w-full object-fill"
-          alt=""
-          width={1920}
-          height={500}
-        />
+        <Carousel>
+          <Carousel.Item>
+            <Image
+              src="/images/banner.png"
+              className="h-90 w-full object-fill"
+              alt=""
+              width={1920}
+              height={500}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              src="/images/banner.png"
+              className="h-90 w-full object-fill"
+              alt=""
+              width={1920}
+              height={500}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              src="/images/banner.png"
+              className="h-90 w-full object-fill"
+              alt=""
+              width={1920}
+              height={500}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              src="/images/banner.png"
+              className="h-90 w-full object-fill"
+              alt=""
+              width={1920}
+              height={500}
+            />
+          </Carousel.Item>
+        </Carousel>
       </div>
 
       <Container className="container">
@@ -217,10 +243,10 @@ export default function IndexPage() {
               dom.push(
                 <Col xs="auto" className="flex items-center p-0 md:mx-5">
                   <Image
-                    src="/images/arrow.jpg"
-                    width={50}
-                    height={50}
-                    className="inline-block w-8 md:w-12"
+                    src="/images/arrow.png"
+                    width={30}
+                    height={30}
+                    className="inline-block w-6 md:w-8"
                     alt=""
                   />
                 </Col>
@@ -237,7 +263,7 @@ export default function IndexPage() {
           backgroundImage: "url(/images/beiji.png)",
           backgroundSize: "100% 100%",
         }}
-        className=" px-7 pb-14"
+        className="px-7 pb-14 md:px-0"
       >
         <div className="font-600 hidden py-14 text-center text-[2.5rem] md:block">
           专业物联网解决方案，倾力满足行业所需
@@ -280,7 +306,7 @@ export default function IndexPage() {
           </Row>
         </div>
 
-        <div className="card container mt-20">
+        <div className="card container mt-14">
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             智慧 + 解决方案
           </div>
@@ -314,43 +340,50 @@ export default function IndexPage() {
             })}
           </Row>
         </div>
+      </div>
 
-        <div className="card container  mt-20">
-          <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
-            实践案例
-          </div>
-          <Row className="m-0 bg-zinc-100 py-6 md:pb-6">
-            {listData4.map((item, index) => {
-              return (
-                <Col
-                  key={item.title}
-                  className=" cursor-pointer rounded-md  text-center "
-                  xs={6}
-                  sm={3}
-                  onClick={() => item.herf && router.push(item.herf)}
-                >
-                  <FadeIn className="mb-0 rounded-md bg-white p-4">
-                    <Image
-                      src={item.img}
-                      width={300}
-                      height={200}
-                      alt=""
-                      className="inline-block h-full w-full"
-                    />
-                    <div className=" my-4 text-center text-lg">
-                      {item.title}
-                    </div>
-                    {/* <div className="text-md hidden text-center md:inline-block">
+      <div className="card container  my-14">
+        <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
+          实践案例
+        </div>
+        <Row className="m-0 bg-zinc-100 py-6 md:pb-6">
+          {listData4.map((item, index) => {
+            return (
+              <Col
+                key={item.title}
+                className=" cursor-pointer rounded-md  text-center "
+                xs={6}
+                sm={3}
+                onClick={() => item.herf && router.push(item.herf)}
+              >
+                <FadeIn className="mb-0 rounded-md bg-white p-4">
+                  <Image
+                    src={item.img}
+                    width={300}
+                    height={200}
+                    alt=""
+                    className="inline-block h-full w-full"
+                  />
+                  <div className=" my-4 text-center text-lg">{item.title}</div>
+                  {/* <div className="text-md hidden text-center md:inline-block">
                       {item.desc}
                     </div> */}
-                  </FadeIn>
-                </Col>
-              )
-            })}
-          </Row>
-        </div>
+                </FadeIn>
+              </Col>
+            )
+          })}
+        </Row>
+      </div>
 
-        <div className="card container  mt-20">
+      <div
+        style={{
+          backgroundColor: "#f2f6fa",
+          backgroundImage: "url(/images/beiji2.png)",
+          backgroundSize: "100% 100%",
+        }}
+        className="px-7 py-14 md:px-0"
+      >
+        <div className="card container ">
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             我们的合作伙伴
           </div>
@@ -358,8 +391,6 @@ export default function IndexPage() {
             {listData5.map((item, index) => {
               return (
                 <Col
-                  xs={6}
-                  sm={4}
                   key={item.title}
                   className="m-0 cursor-pointer rounded-md  text-center "
                   onClick={() => item.herf && router.push(item.herf)}
@@ -384,43 +415,6 @@ export default function IndexPage() {
             })}
           </Row>
         </div>
-      </div>
-
-      <div
-        style={{
-          backgroundColor: "#f2f6fa",
-          backgroundImage: "url(/images/beiji2.png)",
-          backgroundSize: "100% 100%",
-        }}
-      >
-        <Container className="container py-8 md:py-32">
-          <Row>
-            {listData6.map((item) => {
-              return (
-                <Col
-                  key={item.title}
-                  className="flex flex-col items-center justify-center text-center"
-                >
-                  <FadeIn>
-                    <Image
-                      src={item.img}
-                      width={80}
-                      height={100}
-                      alt=""
-                      className="inline-block w-12 md:w-20"
-                    />
-                    <div className="mb-0 mt-6 text-center text-xl font-semibold md:mb-6">
-                      {item.title}
-                    </div>
-                    <div className="hidden w-[50%] text-center text-lg leading-8 md:inline-block">
-                      {item.desc}
-                    </div>
-                  </FadeIn>
-                </Col>
-              )
-            })}
-          </Row>
-        </Container>
       </div>
 
       <div className="relative h-20 md:h-32">

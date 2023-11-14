@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "大数据分析与处理",
-    img: "/images/banners/018.jpg",
+    img: "/images/banners/018.png",
     desc: [
       "随着大数据时代的到来，企业需要处理的海量数据不断增长，这对数据分析平台提出了更高的要求。数据系统集成作为大数据分析平台中的重要一环，能够帮助企业更加高效地实现数据采集、清洗和分析，从而更好地挖掘数据价值。",
       " ",
@@ -22,7 +22,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

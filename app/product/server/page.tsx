@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "服务器与硬件",
-    img: "/images/banners/013.jpg",
+    img: "/images/banners/014.png",
     desc: [
       "当今互联网时代，服务器搭建与机房建设成为各行各业不可或缺的重要环节。作为一家专业的服务提供商，我们深入了解您企业的需求，并全程参与到服务器搭建和机房建设的过程中，为您提供量身定制的解决方案。",
       " ",
@@ -25,7 +25,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

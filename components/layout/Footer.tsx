@@ -41,7 +41,7 @@ function Footer() {
         <Row className="m-0">
           <Col md={2} className="left hidden pr-20 md:inline-block">
             <Image
-              src="/images/logo2.png"
+              src="/images/logo.png"
               alt=""
               className="mb-5 w-full"
               width={175}

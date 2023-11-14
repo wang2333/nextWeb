@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "移动应用",
-    img: "/images/banners/013.jpg",
+    img: "/images/banners/013.png",
     desc: [
       "当今移动应用市场的快速发展使得移动应用开发变得日益重要。作为一家专业的软件与互联网企业，智云创想拥有丰富的技术经验和专业知识，致力于为中小企业提供定制化的移动应用开发和互联网解决方案。",
       " ",
@@ -25,7 +25,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

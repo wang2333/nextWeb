@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "视觉呈现",
-    img: "/images/banners/001.jpg",
+    img: "/images/banners/001.png",
     desc: [
       "我们的使命是帮助企业实现数字化转型，提升效率和竞争力。我们的愿景是成为湖北地区最好的软件与互联网企业，为客户提供卓越的解决方案，推动湖北地区的科技创新。",
       "我们拥有一支强大的团队，他们具备丰富的技术经验和专业知识。我们的团队成员擅长定制化的软件开发和互联网解决方案，涵盖定制软件开发、移动应用开发、网站设计与开发、数据分析与人工智能以及云计算与大数据等领域。",
@@ -19,7 +19,7 @@ const pageData = [
 
   // {
   //   title: "智能感知网系统",
-  //   img: "/images/banners/003.jpg",
+  //   img: "/images/banners/003.png",
   //   desc: [
   //     "简要描述：",
   //     "接入客户自由数据和第三方数据，满足XX市对于疫情中高危地区来XX的实时监测，为当地卫健委疫情防控提供数据支撑。",
@@ -28,7 +28,7 @@ const pageData = [
 
   // {
   //   title: "水库监测平台",
-  //   img: "/images/banners/005.jpg",
+  //   img: "/images/banners/005.png",
   //   desc: [
   //     "简要描述：",
   //     "用来接入RTU设备，完成和设备的通信，采集设备上报数据，统计设备在线状态、雨量、水位（警戒水位）、信号强度、实时图像等不同维度的信息。开发设备远程控制功能，包括远程获取设备参数、配置参数、设备升级、设备重启、水库图像抓拍等功能。",
@@ -37,7 +37,7 @@ const pageData = [
 
   // {
   //   title: "车联网监控平台",
-  //   img: "/images/banners/007.jpg",
+  //   img: "/images/banners/007.png",
   //   desc: [
   //     "简要描述：",
   //     "车辆监控集成管理平台。在线离线车辆统计、车辆的实时视频预览、车辆调度、图片抓拍、视频录像、视频下载、车辆轨迹查询、车辆的语音监听、车辆告警配置、告警信息实时推送等。",
@@ -45,7 +45,7 @@ const pageData = [
   // },
   // {
   //   title: "POI处理系统",
-  //   img: "/images/banners/008.jpg",
+  //   img: "/images/banners/008.png",
   //   desc: [
   //     "简要描述：",
   //     "python抓取工具定向抓取多种POI来源数据，并进行数据过滤，接入，清洗，融合，最终入到成果库（ElasticSearch），接入数据入数仓HIVE,履历数据入Clickhouse，过程计算数据入Hbase,整个数据链路使用flink流式方式多线程并发处理，确保数据入库实时，高效。日数据量级1亿/天，能够为下游应用地图监测，车载导航，POI变更等提供强有力的数据支撑。",
@@ -55,7 +55,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 

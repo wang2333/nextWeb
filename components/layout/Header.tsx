@@ -41,10 +41,13 @@ function SiteHeader() {
   return (
     <header id="header" className={Style.header}>
       <Navbar expand="lg" className="py-[15px]">
-        <Container className="2xl container">
-          <Navbar.Brand href="/" className="ml-5 block p-0 md:ml-0">
+        <Container className="2xl container flex-wrap">
+          <Navbar.Brand
+            href="/"
+            className="mb-0 block w-auto p-0 md:mb-[15px] md:ml-0 md:w-full"
+          >
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="logo"
               className="h-[34px] md:h-[45px]"
             />
@@ -62,7 +65,7 @@ function SiteHeader() {
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "mx-10 py-1 text-xl hover:text-primary md:py-0",
+                        "mr-8 py-1 text-lg hover:text-primary md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       show={show[item.href]}
@@ -81,7 +84,7 @@ function SiteHeader() {
                                 href={child.href}
                                 key={child.href}
                                 className={cn([
-                                  "py-3 text-lg  hover:text-primary md:py-4",
+                                  "text-md py-3  hover:text-primary md:py-4",
                                   pathName === child.href && "text-primary",
                                 ])}
                               >
@@ -99,7 +102,7 @@ function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "mx-10 py-3 text-xl text-nornam hover:text-primary md:py-0",
+                        "mr-8 py-3 text-lg text-nornam hover:text-primary md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}

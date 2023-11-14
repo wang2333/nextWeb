@@ -6,7 +6,7 @@ import Card from "@/components/Card"
 const pageData = [
   {
     title: "应用软件",
-    img: "/images/banners/011.jpg",
+    img: "/images/banners/011.png",
     desc: [
       "我们专注于为各种行业提供定制化的电脑软件开发解决方案，帮助您实现数字化转型，提升业务效率。",
       "无论您是制造业、零售业、医疗保健、金融、教育、物流、餐饮或其他行业，我们的团队将根据您的独特需求和业务模式，精心设计和开发适合您的软件解决方案。",
@@ -37,7 +37,7 @@ const pageData = [
 const page: React.FC = () => {
   return (
     <>
-      <div className="relative h-52 md:h-130">
+      <div className="relative h-52 md:h-[470px]">
         <Image src="/images/beiji4.png" fill alt="" />
       </div>
 
