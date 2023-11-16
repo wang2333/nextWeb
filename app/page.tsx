@@ -394,6 +394,7 @@ export default function IndexPage() {
             {listData5.map((item, index) => {
               return (
                 <Col
+                  xs={4}
                   key={item.title}
                   className="m-0 w-[33.33%] cursor-pointer  rounded-md  text-center md:w-[20%]"
                   onClick={() => item.herf && router.push(item.herf)}
