@@ -341,38 +341,41 @@ export default function IndexPage() {
           </Row>
         </div>
       </div>
-
-      <div className="card container  my-14">
-        <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
-          实践案例
-        </div>
-        <Row className="m-0 bg-zinc-100 py-6 md:pb-6">
-          {listData4.map((item, index) => {
-            return (
-              <Col
-                key={item.title}
-                className=" cursor-pointer rounded-md  text-center "
-                xs={6}
-                sm={3}
-                onClick={() => item.herf && router.push(item.herf)}
-              >
-                <FadeIn className="mb-0 rounded-md bg-white p-4">
-                  <Image
-                    src={item.img}
-                    width={300}
-                    height={200}
-                    alt=""
-                    className="inline-block h-full w-full"
-                  />
-                  <div className=" my-4 text-center text-lg">{item.title}</div>
-                  {/* <div className="text-md hidden text-center md:inline-block">
+      <div className="my-14 px-7 md:px-0">
+        <div className="card container">
+          <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
+            实践案例
+          </div>
+          <Row className="m-0 bg-zinc-100 pt-6 md:pb-6">
+            {listData4.map((item, index) => {
+              return (
+                <Col
+                  key={item.title}
+                  className=" mb-4 cursor-pointer  rounded-md text-center md:mb-0"
+                  xs={6}
+                  sm={3}
+                  onClick={() => item.herf && router.push(item.herf)}
+                >
+                  <FadeIn className="mb-0 rounded-md bg-white p-4">
+                    <Image
+                      src={item.img}
+                      width={300}
+                      height={200}
+                      alt=""
+                      className="inline-block h-full w-full"
+                    />
+                    <div className=" my-4 text-center text-lg">
+                      {item.title}
+                    </div>
+                    {/* <div className="text-md hidden text-center md:inline-block">
                       {item.desc}
                     </div> */}
-                </FadeIn>
-              </Col>
-            )
-          })}
-        </Row>
+                  </FadeIn>
+                </Col>
+              )
+            })}
+          </Row>
+        </div>
       </div>
 
       <div

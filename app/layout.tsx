@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className='antialiased" bg-background min-h-screen font-sans'>
         <div className="relative flex h-screen flex-col">
           <Header />
-          <div className="flex-1  pt-[120px]">{children}</div>
+          <div className="flex-1  pt-[65px] md:pt-[125px]">{children}</div>
           <Footer />
         </div>
         <TailwindIndicator />
