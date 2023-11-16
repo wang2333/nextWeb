@@ -65,7 +65,7 @@ function SiteHeader() {
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "mr-8 py-1 text-lg hover:text-primary md:py-0",
+                        "ml-3 mr-8 py-1 text-lg hover:text-primary md:ml-0 md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       show={show[item.href]}
@@ -102,7 +102,7 @@ function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "mr-8 py-3 text-lg text-nornam hover:text-primary md:py-0",
+                        "ml-3 mr-8 py-3 text-lg text-nornam hover:text-primary md:ml-0 md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}
