@@ -80,6 +80,7 @@ const footData = [
     childRen: [
       {
         title: "+15926269363",
+        herf: "",
       },
     ],
   },
@@ -123,9 +124,9 @@ function Footer() {
                           <div
                             className="child mb-2 cursor-pointer"
                             key={child.title}
-                            onClick={() =>
-                              child.herf && router.push(child.herf)
-                            }
+                            onClick={() => {
+                              router.push(child.herf)
+                            }}
                           >
                             {child.title}
                           </div>

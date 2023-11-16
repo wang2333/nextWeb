@@ -390,12 +390,12 @@ export default function IndexPage() {
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             我们的合作伙伴
           </div>
-          <Row className="m-0 bg-zinc-100 py-6 md:pb-6">
+          <Row className="m-0 bg-zinc-100 py-6 md:pb-6 ">
             {listData5.map((item, index) => {
               return (
                 <Col
                   key={item.title}
-                  className="m-0 cursor-pointer rounded-md  text-center "
+                  className="m-0 w-[33.33%] cursor-pointer  rounded-md  text-center md:w-[20%]"
                   onClick={() => item.herf && router.push(item.herf)}
                 >
                   <FadeIn className="mb-4 rounded-md bg-white p-4 ">
