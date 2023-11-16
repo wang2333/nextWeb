@@ -346,12 +346,12 @@ export default function IndexPage() {
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             实践案例
           </div>
-          <Row className="m-0 bg-zinc-100 pt-6 md:pb-6">
+          <Row className="m-0 bg-zinc-100 pt-6 ">
             {listData4.map((item, index) => {
               return (
                 <Col
                   key={item.title}
-                  className=" mb-4 cursor-pointer  rounded-md text-center md:mb-0"
+                  className="mb-4 cursor-pointer  rounded-md text-center "
                   xs={6}
                   sm={3}
                   onClick={() => item.herf && router.push(item.herf)}
@@ -364,7 +364,7 @@ export default function IndexPage() {
                       alt=""
                       className="inline-block h-full w-full"
                     />
-                    <div className=" my-4 text-center text-lg">
+                    <div className="mb-0 mt-4 text-center text-lg">
                       {item.title}
                     </div>
                     {/* <div className="text-md hidden text-center md:inline-block">
@@ -390,7 +390,7 @@ export default function IndexPage() {
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             我们的合作伙伴
           </div>
-          <Row className="m-0 bg-zinc-100 py-6 md:pb-6 ">
+          <Row className="m-0 bg-zinc-100 pt-6">
             {listData5.map((item, index) => {
               return (
                 <Col
@@ -407,7 +407,7 @@ export default function IndexPage() {
                       alt=""
                       className="inline-block h-full w-full"
                     />
-                    <div className=" my-4 text-center text-lg">
+                    <div className="mb-0 mt-4 text-center text-lg md:mb-4">
                       {item.title}
                     </div>
                     <div className="hidden text-left text-sm md:inline-block">
