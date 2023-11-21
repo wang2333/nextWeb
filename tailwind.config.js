@@ -15,10 +15,10 @@ module.exports = {
         "10xl": "1920px",
       },
       fontSize: {
-        xs: ["0.75rem", "0.75rem"],
-        base: ["1rem", "1rem"],
-        lg: ["1.25rem", "1.25rem"],
-        xl: ["1.5rem", "1.5rem"],
+        xs: ["0.75rem", "1.25rem"],
+        base: ["1rem", "1.5rem"],
+        lg: ["1.25rem", "1.75rem"],
+        xl: ["1.5rem", "2rem"],
       },
       boxShadow: {
         base: "box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;",

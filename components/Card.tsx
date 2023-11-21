@@ -5,11 +5,12 @@ interface CardProps {
   title: string
   img?: string
   desc: string[]
+  id?: string
 }
 
-const Card: React.FC<CardProps> = ({ title, img, desc }) => {
+const Card: React.FC<CardProps> = ({ id, title, img, desc }) => {
   return (
-    <div className="container mb-12 mt-16 md:mt-24">
+    <div className="container mb-12 mt-16 px-4 md:mt-24 md:px-0" id={id}>
       <span className="inline-block  text-xl font-semibold ">{title}</span>
       <div className="my-5 h-1 w-36 bg-blue-500"></div>
       {img && (
@@ -24,7 +25,7 @@ const Card: React.FC<CardProps> = ({ title, img, desc }) => {
         </div>
       )}
       {desc.map((item, index) => (
-        <p key={index} className="mt-2 px-3 text-lg leading-8 md:p-0">
+        <p key={index} className="mt-2  text-lg leading-8 ">
           {item}
         </p>
       ))}

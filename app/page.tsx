@@ -8,7 +8,7 @@ import FadeIn from "@/components/spring/FadeIn"
 
 interface ListData {
   title: string
-  desc: string
+  desc?: string
   img: string
   herf?: string
 }
@@ -100,52 +100,47 @@ const listData4: ListData[] = [
     title: "数据治理中台",
     desc: "网站设计与移动应用UI设计",
     img: "/images/banners/002.png",
-    herf: "/case/dataGovernance",
+    herf: "/plan/bigData#sjzl",
   },
   {
     title: "日志运维移动端",
     desc: "网站设计与移动应用UI设计",
     img: "/images/banners/004.png",
-    herf: "/case/log",
+    herf: "/product/application#log",
   },
   {
     title: "HN智慧气象系统",
     desc: "应用软件、网站开发、小程序、移动应用",
     img: "/images/banners/006.png",
-    herf: "/case/weather",
+    herf: "/product/mobile#hnqx",
   },
 
   {
     title: "轻松买小程序",
     desc: "应用软件、网站开发小程序、移动应用",
     img: "/images/banners/009.png",
-    herf: "/case/buy",
+    herf: "/product/weChat#qsm",
   },
 ]
 const listData5: ListData[] = [
   {
     title: "湖北经视文化传播有限公司",
-    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
     img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
-    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
     img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
-    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
     img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
-    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
     img: "/images/banners/002.png",
   },
   {
     title: "湖北经视文化传播有限公司",
-    desc: "网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计网站设计与移动应用UI设计",
     img: "/images/banners/002.png",
   },
 ]
@@ -407,11 +402,8 @@ export default function IndexPage() {
                       alt=""
                       className="inline-block h-full w-full"
                     />
-                    <div className="mb-0 mt-4 text-center text-lg md:mb-4">
+                    <div className=" mt-4 text-center text-lg ">
                       {item.title}
-                    </div>
-                    <div className="hidden text-left text-sm md:inline-block">
-                      {item.desc}
                     </div>
                   </FadeIn>
                 </Col>

@@ -21,8 +21,19 @@ const pageData = [
       "除了移动应用开发外，我们还提供包括微信小程序开发、网站开发、电子商务解决方案等在内的一站式互联网解决方案。我们的目标是通过技术和创新，帮助企业实现数字化转型，提升竞争力和用户体验。",
     ],
   },
+
+  {
+    title: "实践案例 · HN智慧气象系统",
+    id: "hnqx",
+    img: "/images/banners/006.png",
+    desc: [
+      "简要描述：",
+      "HN省气象局定制开发的一款APP。定时查询气象云图、雷达云图、实时雨量、温度、风速风向、湿度、可见度、气压、实时图片、实时天气预报等不同维度的信息并以地图和列表联动的方式展现；同时多个不同维度的页面支持循环轮播。",
+    ],
+  },
 ]
-const page: React.FC = () => {
+
+export default function Page() {
   return (
     <>
       <div className="relative h-52 md:h-[470px]">
@@ -30,9 +41,8 @@ const page: React.FC = () => {
       </div>
 
       {pageData.map((item, index) => (
-        <Card {...item} key={item.title} />
+        <Card {...item} key={item.title} id={item.id} />
       ))}
     </>
   )
 }
-export default page

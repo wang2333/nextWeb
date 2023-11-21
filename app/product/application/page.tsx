@@ -33,6 +33,15 @@ const pageData = [
       "我们的餐饮软件解决方案包括点餐系统、预约管理系统、菜品管理系统等。借助我们的软件，您将提供更便捷的点餐体验、优化菜品管理流程、提高工作效率，让您的餐饮业务更加顺利运营。",
     ],
   },
+  {
+    title: "实践案例 · 日志运维移动端",
+    id: "log",
+    img: "/images/banners/004.png",
+    desc: [
+      "简要描述：",
+      "基于企业微信的二次企业应用开发，用于满足公司8个部门500多名员工日报提交和周报提交，以及实时的项目跟踪和工时统计等（同时满足PC和手机端），部门间数据相互独立不可见。",
+    ],
+  },
 ]
 const page: React.FC = () => {
   return (
@@ -42,7 +51,7 @@ const page: React.FC = () => {
       </div>
 
       {pageData.map((item, index) => (
-        <Card {...item} key={item.title} />
+        <Card {...item} key={item.title} id={item.id} />
       ))}
     </>
   )

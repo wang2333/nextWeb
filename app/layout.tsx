@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="flex-1  pt-[65px] md:pt-[125px]">{children}</div>
           <Footer />
         </div>
-        <TailwindIndicator />
+        {/* <TailwindIndicator /> */}
       </body>
     </html>
   )

@@ -40,7 +40,7 @@ function SiteHeader() {
   }
   return (
     <header id="header" className={Style.header}>
-      <Navbar expand="lg" className="py-[15px]">
+      <Navbar expand="lg" className="px-4 py-[15px] md:px-0">
         <Container className="2xl container flex-wrap">
           <Navbar.Brand
             href="/"
@@ -53,7 +53,7 @@ function SiteHeader() {
             />
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-3" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav" className="pt-3 md:pt-0">
             <Nav className="flex items-start md:items-center">
@@ -65,7 +65,7 @@ function SiteHeader() {
                       key={item.title}
                       id="basic-nav-dropdown"
                       className={cn([
-                        "ml-4 mr-8 py-1 text-lg hover:text-primary md:ml-0 md:py-0",
+                        "ml-4 mr-8 w-full border-b border-dashed border-b-zinc-400 py-1 text-lg hover:text-primary md:ml-0 md:w-fit md:border-none md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       show={show[item.href]}
@@ -84,7 +84,7 @@ function SiteHeader() {
                                 href={child.href}
                                 key={child.href}
                                 className={cn([
-                                  "text-md py-3  hover:text-primary md:py-4",
+                                  "ml-2 w-full border-b border-dashed border-b-zinc-400 py-3 text-lg last:border-none hover:text-primary  md:m-0 md:border-none md:py-4",
                                   pathName === child.href && "text-primary",
                                 ])}
                               >
@@ -102,7 +102,7 @@ function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn([
-                        "ml-4 mr-8 py-3 text-lg text-nornam hover:text-primary md:ml-0 md:py-0",
+                        "ml-4 mr-8 w-full border-b border-dashed border-b-zinc-400 py-3 text-lg text-nornam hover:text-primary md:ml-0 md:w-fit md:border-none md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}
