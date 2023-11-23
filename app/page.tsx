@@ -258,7 +258,7 @@ export default function IndexPage() {
           backgroundImage: "url(/images/beiji.png)",
           backgroundSize: "100% 100%",
         }}
-        className="px-7 pb-14 md:px-0"
+        className="px-5 pb-14 md:px-0"
       >
         <div className="font-600 hidden py-14 text-center text-[2.5rem] md:block">
           专业物联网解决方案，倾力满足行业所需
@@ -282,7 +282,7 @@ export default function IndexPage() {
                   sm={2}
                   onClick={() => item.herf && router.push(item.herf)}
                 >
-                  <div className="relative mx-auto h-36 w-36 text-center">
+                  <div className="relative mx-auto h-36  text-center">
                     <Image
                       src={item.img}
                       fill={true}
@@ -336,7 +336,7 @@ export default function IndexPage() {
           </Row>
         </div>
       </div>
-      <div className="my-14 px-7 md:px-0">
+      <div className="my-14 px-5 md:px-0">
         <div className="card container">
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
             实践案例
@@ -379,7 +379,7 @@ export default function IndexPage() {
           backgroundImage: "url(/images/beiji2.png)",
           backgroundSize: "100% 100%",
         }}
-        className="px-7 py-14 md:px-0"
+        className="px-5 py-14 md:px-0"
       >
         <div className="card container ">
           <div className="border-b border-b-slate-400 py-5 text-center text-[1.5rem] font-semibold">
@@ -391,7 +391,7 @@ export default function IndexPage() {
                 <Col
                   xs={4}
                   key={item.title}
-                  className="m-0 w-[33.33%] cursor-pointer  rounded-md  text-center md:w-[20%]"
+                  className="m-0 w-[50%] cursor-pointer  rounded-md  text-center md:w-[20%]"
                   onClick={() => item.herf && router.push(item.herf)}
                 >
                   <FadeIn className="mb-4 rounded-md bg-white p-4 ">
