@@ -1,9 +1,10 @@
 "use client"
 
 import React, { useState } from "react"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { Col, Container, Row } from "react-bootstrap"
+
+import Image from "@/components/Image"
 
 const pageData = [
   {
@@ -26,8 +27,6 @@ const pageData = [
   },
 ]
 export default function IndexPage() {
-  const router = useRouter()
-
   const [tabs, setTabs] = useState([
     {
       title: "热门资讯",
@@ -93,32 +92,30 @@ export default function IndexPage() {
 
       <Container className="container px-7 md:px-0">
         {pageData.map((item) => (
-          <Row
-            key={item.title}
-            className="border-1 m-0 mb-10 cursor-pointer border-dashed border-zinc-400 px-5 py-8"
-            onClick={() => router.push("/news/detail")}
-          >
-            <Col xs={3} md={3} className="relative mr-5 h-40">
-              <Image src={item.img} fill alt="" />
-            </Col>
-            <Col className="flex ">
-              <Row className="flex-col justify-between">
-                <div className="text-md md:text-lg">{item.title}</div>
-                <div className="hidden text-sm text-gray md:inline-block">
-                  {item.desc}
-                </div>
-                <div className="text-md inline-block md:hidden">
-                  {item.date}
-                </div>
-              </Row>
-            </Col>
-            <Col
-              md={3}
-              className="hidden items-start justify-center  text-lg md:flex"
-            >
-              {item.date}
-            </Col>
-          </Row>
+          <Link href={"/news/detail"} key={item.title}>
+            <Row className="border-1 m-0 mb-10 cursor-pointer border-dashed border-zinc-400 px-5 py-8">
+              <Col xs={3} md={3} className="relative mr-5 h-40">
+                <Image src={item.img} fill alt="" />
+              </Col>
+              <Col className="flex ">
+                <Row className="flex-col justify-between">
+                  <div className="text-md md:text-lg">{item.title}</div>
+                  <div className="hidden text-sm text-gray md:inline-block">
+                    {item.desc}
+                  </div>
+                  <div className="text-md inline-block md:hidden">
+                    {item.date}
+                  </div>
+                </Row>
+              </Col>
+              <Col
+                md={3}
+                className="hidden items-start justify-center  text-lg md:flex"
+              >
+                {item.date}
+              </Col>
+            </Row>
+          </Link>
         ))}
       </Container>
     </>

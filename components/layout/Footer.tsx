@@ -1,10 +1,10 @@
 "use client"
 
 import React from "react"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { Col, Container, Row } from "react-bootstrap"
 
+import Image from "@/components/Image"
 import { Icons } from "@/components/icons"
 
 const footData = [
@@ -86,8 +86,6 @@ const footData = [
   },
 ]
 function Footer() {
-  const router = useRouter()
-
   return (
     <div className=" bg-black1 ">
       <Container className="container pt-16 ">
@@ -121,15 +119,13 @@ function Footer() {
                     <div className="childRen">
                       {item.childRen.map((child) => {
                         return (
-                          <div
+                          <Link
                             className="child mb-2 cursor-pointer"
                             key={child.title}
-                            onClick={() => {
-                              router.push(child.herf)
-                            }}
+                            href={child.herf}
                           >
                             {child.title}
-                          </div>
+                          </Link>
                         )
                       })}
                     </div>

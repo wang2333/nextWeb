@@ -1,16 +1,17 @@
 "use client"
 
-import Image from "next/image"
-import { useRouter } from "next/navigation"
+import { Url } from "next/dist/shared/lib/router/router"
+import Link from "next/link"
 import { Carousel, Col, Container, Row, Stack } from "react-bootstrap"
 
+import Image from "@/components/Image"
 import FadeIn from "@/components/spring/FadeIn"
 
 interface ListData {
   title: string
   desc?: string
   img: string
-  herf?: string
+  herf: Url
 }
 
 const listData: ListData[] = [
@@ -126,22 +127,27 @@ const listData5: ListData[] = [
   {
     title: "湖北经视文化传播有限公司",
     img: "/images/banners/002.png",
+    herf: "",
   },
   {
     title: "湖北经视文化传播有限公司",
     img: "/images/banners/002.png",
+    herf: "",
   },
   {
     title: "湖北经视文化传播有限公司",
     img: "/images/banners/002.png",
+    herf: "",
   },
   {
     title: "湖北经视文化传播有限公司",
     img: "/images/banners/002.png",
+    herf: "",
   },
   {
     title: "湖北经视文化传播有限公司",
     img: "/images/banners/002.png",
+    herf: "",
   },
 ]
 const listData6: ListData[] = [
@@ -163,7 +169,6 @@ const listData6: ListData[] = [
 ]
 
 export default function IndexPage() {
-  const router = useRouter()
   return (
     <>
       <div className="mx-auto ">
@@ -280,21 +285,24 @@ export default function IndexPage() {
                   className="cursor-pointer p-0 text-center"
                   xs={4}
                   sm={2}
-                  onClick={() => item.herf && router.push(item.herf)}
                 >
-                  <div className="relative mx-auto h-36  text-center">
-                    <Image
-                      src={item.img}
-                      fill={true}
-                      alt=""
-                      className="inline-block"
-                      style={{ objectFit: "contain" }}
-                    />
-                  </div>
-                  <div className=" my-4 text-center text-lg">{item.title}</div>
-                  <div className="text-md hidden text-center md:inline-block">
-                    {item.desc}
-                  </div>
+                  <Link href={item.herf}>
+                    <div className="relative mx-auto h-36  text-center">
+                      <Image
+                        src={item.img}
+                        fill={true}
+                        alt=""
+                        className="inline-block"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
+                    <div className=" my-4 text-center text-lg">
+                      {item.title}
+                    </div>
+                    <div className="text-md hidden text-center md:inline-block">
+                      {item.desc}
+                    </div>
+                  </Link>
                 </Col>
               )
             })}
@@ -313,23 +321,24 @@ export default function IndexPage() {
                   className="relative mb-5 cursor-pointer p-0 text-center"
                   xs={6}
                   md={3}
-                  onClick={() => item.herf && router.push(item.herf)}
                 >
-                  <FadeIn>
-                    <Image
-                      src={item.img}
-                      width={100}
-                      height={100}
-                      alt=""
-                      className="inline-block w-[85%] "
-                    />
-                    <div className="absolute left-[10%] top-[10%] w-[80%] text-left text-lg text-white md:left-[15%]">
-                      {item.title}
-                    </div>
-                    <div className="text-md absolute left-[10%] top-[20%] hidden max-w-[15rem] text-left text-white md:left-[15%] md:inline-block">
-                      {item.desc}
-                    </div>
-                  </FadeIn>
+                  <Link href={item.herf}>
+                    <FadeIn>
+                      <Image
+                        src={item.img}
+                        width={100}
+                        height={100}
+                        alt=""
+                        className="inline-block w-[85%] "
+                      />
+                      <div className="absolute left-[10%] top-[10%] w-[80%] text-left text-lg text-white md:left-[15%]">
+                        {item.title}
+                      </div>
+                      <div className="text-md absolute left-[10%] top-[20%] hidden max-w-[15rem] text-left text-white md:left-[15%] md:inline-block">
+                        {item.desc}
+                      </div>
+                    </FadeIn>
+                  </Link>
                 </Col>
               )
             })}
@@ -349,23 +358,24 @@ export default function IndexPage() {
                   className="mb-4 cursor-pointer  rounded-md text-center "
                   xs={6}
                   sm={3}
-                  onClick={() => item.herf && router.push(item.herf)}
                 >
-                  <FadeIn className="mb-0 rounded-md bg-white p-4">
-                    <Image
-                      src={item.img}
-                      width={300}
-                      height={200}
-                      alt=""
-                      className="inline-block h-full w-full"
-                    />
-                    <div className="mb-0 mt-4 text-center text-lg">
-                      {item.title}
-                    </div>
-                    {/* <div className="text-md hidden text-center md:inline-block">
+                  <Link href={item.herf}>
+                    <FadeIn className="mb-0 rounded-md bg-white p-4">
+                      <Image
+                        src={item.img}
+                        width={300}
+                        height={200}
+                        alt=""
+                        className="inline-block h-full w-full"
+                      />
+                      <div className="mb-0 mt-4 text-center text-lg">
+                        {item.title}
+                      </div>
+                      {/* <div className="text-md hidden text-center md:inline-block">
                       {item.desc}
                     </div> */}
-                  </FadeIn>
+                    </FadeIn>
+                  </Link>
                 </Col>
               )
             })}
@@ -392,20 +402,21 @@ export default function IndexPage() {
                   xs={4}
                   key={item.title}
                   className="m-0 w-[50%] cursor-pointer  rounded-md  text-center md:w-[20%]"
-                  onClick={() => item.herf && router.push(item.herf)}
                 >
-                  <FadeIn className="mb-4 rounded-md bg-white p-4 ">
-                    <Image
-                      src={item.img}
-                      width={300}
-                      height={200}
-                      alt=""
-                      className="inline-block h-full w-full"
-                    />
-                    <div className=" mt-4 text-center text-lg ">
-                      {item.title}
-                    </div>
-                  </FadeIn>
+                  <Link href={item.herf}>
+                    <FadeIn className="mb-4 rounded-md bg-white p-4 ">
+                      <Image
+                        src={item.img}
+                        width={300}
+                        height={200}
+                        alt=""
+                        className="inline-block h-full w-full"
+                      />
+                      <div className=" mt-4 text-center text-lg ">
+                        {item.title}
+                      </div>
+                    </FadeIn>
+                  </Link>
                 </Col>
               )
             })}

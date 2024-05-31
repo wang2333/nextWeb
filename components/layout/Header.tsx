@@ -1,18 +1,13 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "lib/utils"
-import {
-  Collapse,
-  Container,
-  Image,
-  Nav,
-  NavDropdown,
-  Navbar,
-} from "react-bootstrap"
+import { Collapse, Container, Nav, NavDropdown, Navbar } from "react-bootstrap"
 
 import { siteConfig } from "@/config/site"
+import Image from "@/components/Image"
 import { Icons } from "@/components/icons"
 
 import Style from "./layout.module.scss"
@@ -42,15 +37,13 @@ function SiteHeader() {
     <header id="header" className={Style.header}>
       <Navbar expand="lg" className="px-4 py-[15px] md:px-0">
         <Container className="2xl container flex-wrap">
-          <Navbar.Brand
-            href="/"
-            className="mb-0 block w-auto p-0 md:mb-[15px] md:ml-0 md:w-full"
-          >
-            <Image
-              src="/images/logo.png"
-              alt="logo"
-              className="h-[34px] md:h-[45px]"
-            />
+          <Navbar.Brand className="mb-0 block w-auto p-0 md:mb-[15px] md:ml-0 md:w-full">
+            <Link
+              href="/"
+              className="relative inline-block h-[34px] w-[180px] md:h-[45px]"
+            >
+              <Image src="/images/logo.png" alt="logo" fill={true} />
+            </Link>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -81,14 +74,13 @@ function SiteHeader() {
                           {item.children.map((child) => {
                             return (
                               <NavDropdown.Item
-                                href={child.href}
                                 key={child.href}
                                 className={cn([
                                   "ml-2 w-full border-b border-dashed border-b-zinc-400 py-3 text-lg last:border-none hover:text-primary  md:m-0 md:border-none md:py-4",
                                   pathName === child.href && "text-primary",
                                 ])}
                               >
-                                {child.title}
+                                <Link href={child.href}>{child.title}</Link>
                               </NavDropdown.Item>
                             )
                           })}
@@ -100,15 +92,16 @@ function SiteHeader() {
                   return (
                     <Nav.Link
                       key={item.href}
-                      href={item.href}
                       className={cn([
                         "ml-4 mr-8 w-full border-b border-dashed border-b-zinc-400 py-3 text-lg text-nornam hover:text-primary md:ml-0 md:w-fit md:border-none md:py-0",
                         pathName === item.href && "text-primary",
                       ])}
                       onMouseLeave={handleHide}
                     >
-                      {item.title}
-                      {item.children && <Icons.down className="ml-1" />}
+                      <Link href={item.href}>
+                        {item.title}
+                        {item.children && <Icons.down className="ml-1" />}
+                      </Link>
                     </Nav.Link>
                   )
                 }

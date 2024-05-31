@@ -1,8 +1,8 @@
 import React from "react"
-import Image from "next/image"
 import { Col, Container, Row } from "react-bootstrap"
 
 import Card from "@/components/Card"
+import Image from "@/components/Image"
 
 const pageData = [
   {
